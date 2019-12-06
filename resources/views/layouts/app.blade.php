@@ -49,10 +49,13 @@
       </div>
     </div>
   </header>
+
 <div class="container">
     @yield("content")
 </div>
    <!-- /.container -->
+
+
   <footer class="bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; E-learning 2019</p>
