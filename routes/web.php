@@ -22,3 +22,5 @@ Route::get("/produits/{id}",function ($id){
 });
 */
 Route::get("/produits/{id}","ProductsController@show");
+Auth::routes();
+Route::get('/home','HomeController@index')->name('home');

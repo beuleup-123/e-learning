@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cour extends Model
 {
+    protected  $guarded = [];
+
     public function categories(){
-        return $this->hasMany("App\category");
+        return $this->belongsTo("App\category");
     //
 }
+    public function users(){
+        return $this->belongsToMany("App\User");
+    }
 }

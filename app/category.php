@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class category extends Model
 {
     public function cours(){
-        return $this->hasMany("App\cour");
-    //
+        return $this->hasMany("App\Cour");
+    }
 }

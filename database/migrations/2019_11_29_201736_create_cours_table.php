@@ -18,7 +18,7 @@ class CreateCoursTable extends Migration
             $table->string("nom");
             $table->string("type");
             $table->text("description");
-            $table->unsignedInteger("category_id")->nullable();
+            $table->unsignedInteger("category_id")->nullable(true);
             $table->timestamps();
         });
     }
