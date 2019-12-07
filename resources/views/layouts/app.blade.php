@@ -20,12 +20,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{asset('home.blade.php')}}">Accueil
+              <a class="nav-link" href="{{route('home')}}">Accueil
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('projet/formation.blade.php')}}" >Formations</a>
+              <a class="nav-link" href="{{route('formation')}}" >Formations</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html" src="contact.html">Contact</a>

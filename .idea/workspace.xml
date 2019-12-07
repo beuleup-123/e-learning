@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b21cce6-bdfa-4a60-9eba-6c12373054c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_30_172608_join_cours_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_02_184235_add_status_to_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/accueils.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/category/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/copie" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cours/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cours/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cour.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cour.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EtudiantsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_29_201736_create_cours_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_29_201736_create_cours_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/products/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projet/formation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projet/formation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,6 +190,7 @@
       <workItem from="1575481897005" duration="10761000" />
       <workItem from="1575568352523" duration="10414000" />
       <workItem from="1575579305377" duration="50000" />
+      <workItem from="1575715290722" duration="2936000" />
     </task>
     <servers />
   </component>
@@ -226,9 +206,9 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="33" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1575113683265" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1575579348674">
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1575715297740">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1575579348674" />
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1575715297740" />
   </component>
 </project>

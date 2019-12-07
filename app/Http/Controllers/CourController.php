@@ -31,7 +31,7 @@ class CourController extends Controller
         $cours->type = $request->input('type');
         $cours->description = $request->input('description');
         $cours->save();
-        return redirect('/cours');
+        return redirect()->route('/cours')->with(['success' => "cours enregistré"]);
     }
     public function edit($id)
     {
@@ -51,7 +51,8 @@ class CourController extends Controller
             $cours->description = $request->input('description');
             $cours->save();
         }
-        return redirect('/cours');
+        return redirect()->route('/cours')->with(['success' => "les modifications sont enregistrées"]);
+
     }
 
 }

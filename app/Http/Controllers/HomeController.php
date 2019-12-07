@@ -25,5 +25,13 @@ class HomeController extends Controller
     {
       return view('home');
     }
+    public function layouts()
+    {
+        return view('layouts.app');
+    }
+    public function format()
+    {
+        return view('projet.formation');
+    }
 
 }

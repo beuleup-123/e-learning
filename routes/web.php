@@ -26,8 +26,8 @@ Route::post('/cours/create','CourController@store')->name('cour_store');
 Route::get('cours/{id}/edit','CourController@edit')->name('cour_edit');
 Route::patch('cours/{id}/edit','CourController@update')->name('cour_update');
 
-
-
+Route::get('/projet/formation','HomeController@format')->name('formation');
+Route::get('/projet/layout','HomeController@layouts')->name('layout');
 
 Auth::routes();
 Route::get('/home','HomeController@index')->name('home');
