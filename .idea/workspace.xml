@@ -3,11 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8b21cce6-bdfa-4a60-9eba-6c12373054c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/cours/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projet/formation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projet/formation.blade.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/fr/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fr/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/index.blade.php" afterDir="false" />
+>>>>>>> view
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +148,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -152,6 +160,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/lang" />
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
@@ -198,6 +207,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="449" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575718875550">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="449" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1575718875550" />
     <state x="499" y="155" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575117626168">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -209,6 +222,14 @@
     <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1575715297740">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
+<<<<<<< HEAD
     <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1575715297740" />
+=======
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1575579348674" />
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1575722815432">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1575722815432" />
+>>>>>>> view
   </component>
 </project>

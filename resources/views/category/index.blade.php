@@ -2,24 +2,23 @@
 @section('content')
     <div class="container">
         <div>
-            <a href="{{route('cour_index')}}" class="btn btn-primary">Ajouter des Cours</a>
+            <a href="{{route('category_create')}}" class="btn btn-primary">Ajouter des Cours</a>
         </div>
         <table class="table table-striped">
             <tr>
                 <th></th>
-                <th>Nom cours</th>
-                <th>type</th>
-                <th>Description</th>
+                <th>Nom category</th>
                 <th></th>
             </tr>
-            @foreach($cour as $nom)
+            @foreach($categories as $nom)
                 <tr>
                     <td></td>
                     <td>{{$nom->nom}}</td>
-                    <td>{{$nom->type}}</td>
-                    <td>{{$nom->description}}</td>
-                    <td></td>
+                    <td>
+                        <p> <a href="{{route('category_edit',['id'=>$nom->id])}}">Editer</a> </p>
+                    </td>
                 </tr>
             @endforeach
         </table>
     </div>
+@endsection

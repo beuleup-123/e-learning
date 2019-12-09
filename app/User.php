@@ -13,11 +13,14 @@ class User extends Authenticatable
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var array;
+use Illuminate\Http\Request;
+
      */
     protected $fillable = [
         'name', 'email', 'password',
     ];
+    //protected $guarded = ['password','remember_token'];
 
     /**
      * The attributes that should be hidden for arrays.

@@ -1,11 +1,14 @@
 @extends("layouts.app")
 @section("content")
 <div>
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+            <div class="alert alert-danger">{{$error}}</div>
+        @endforeach
+    @endif
+
     <form action="{{route('cour_store')}}" method="post">
         @csrf
-        <div>
-            <a href="{{route('cour_store')}}" class="btn btn-primary">Ajouter des Cours</a>
-        </div>
         <div>
             <input type="text" name="nom" class="form-control" placeholder="nom cours">
         </div>
@@ -14,6 +17,14 @@
          </div>
         <div>
             <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="La description"></textarea>
+        </div>
+        <div>
+            <select name="category_id" id="category_id" class="form-control">
+                <option value=""></option>
+                @foreach($categories as $key => $value)
+                    <option value="{{$key}}">{{$value}}</option>
+                @endforeach
+            </select>
         </div>
 
         <div>
