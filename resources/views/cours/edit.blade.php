@@ -2,11 +2,9 @@
 @section("content")
     <div>
         <form action="{{route('cour_update',['id'=>$cours->id])}}" method="post">
-        @csrf
+            @csrf
             @method('patch')
-            <div>
-                <a href="{{route('cour_store')}}" class="btn btn-primary">Ajouter des Cours</a>
-            </div>
+
             <div>
                 <input type="text" name="nom" class="form-control" placeholder="nom cours" value="{{$cours->nom}}">
             </div>
@@ -16,10 +14,17 @@
             <div>
                 <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="La description"></textarea>
             </div>
-
             <div>
-                <button class="btn btn-primary">Enregistrer</button>
-            </div>
+                <select name="category_id" id="category_id" class="form-control">
+                    <option value=""></option>
+                    @foreach($categories as $key => $value)
+                        <option value="{{$key}}">{{$value}}</option>
+                    @endforeach
+                </select>
+
+                <div>
+                    <button class="btn btn-primary">Enregistrer</button>
+                </div>
         </form>
     </div>
 @endsection
