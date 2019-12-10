@@ -1,10 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\category;
 use Illuminate\Http\Request;
-
 class CategoriesController extends Controller
 {
     public function index()
@@ -26,6 +24,15 @@ class CategoriesController extends Controller
         $categories->save();
         return redirect('/categories');
     }
+
+    public function destroy($id)
+    {
+        $categories = \App\category::find($id);
+        if($categories)
+            $categories->delete();
+        return redirect()->route('category_index');
+    }
+
     public function edit($id)
     {
         $categories = \App\category::find($id);//on recupere le produit
@@ -45,6 +52,5 @@ class CategoriesController extends Controller
         return redirect('/categories');
     }
 
-}
-//
 
+}

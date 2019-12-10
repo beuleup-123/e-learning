@@ -2,7 +2,7 @@
 @section("content")
     <div>
         <form action="{{route('cour_update',['id'=>$cours->id])}}" method="post">
-        @csrf
+            @csrf
             @method('patch')
 
             <div>
@@ -22,9 +22,9 @@
                     @endforeach
                 </select>
 
-            <div>
-                <button class="btn btn-primary">Enregistrer</button>
-            </div>
+                <div>
+                    <button class="btn btn-primary">Enregistrer</button>
+                </div>
         </form>
     </div>
 @endsection

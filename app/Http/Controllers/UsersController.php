@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\User;
 use Illuminate\Http\Request;
 
@@ -16,7 +15,6 @@ class UsersController extends Controller
     {
         return view('user.create');
     }
-
     public function store(Request $request)
     {
         /*Cour::create(['nom'=>$request->input('nom')]);
@@ -26,7 +24,6 @@ class UsersController extends Controller
             'email' => 'required|string|regex:/^.+@.+$/i',
             'password' => 'required|min:8',
         ]);
-
         $user = new User();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
@@ -35,7 +32,6 @@ class UsersController extends Controller
         $user->save();
 
         return redirect()->route('user_index')->with(['success' => "Vos données sont enregistrées"]);
-
     }
     public function edit($id)
     {
@@ -63,10 +59,10 @@ class UsersController extends Controller
             $user->status = $request->input('status');
             $user->save();
         }
-
         return redirect('/user')->with(['success' => "modification enregistré"]);
 
 
     }
+
 
 }

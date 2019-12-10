@@ -8,14 +8,18 @@
             <tr>
                 <th></th>
                 <th>Nom category</th>
-                <th></th>
+                <th>Editer</th>
+                <th>Suprimer</th>
             </tr>
             @foreach($categories as $nom)
                 <tr>
                     <td></td>
                     <td>{{$nom->nom}}</td>
                     <td>
-                        <p> <a href="{{route('category_edit',['id'=>$nom->id])}}">Editer</a> </p>
+                        <p> <a class="btn btn-warning" href="{{route('category_edit',['id'=>$nom->id])}}">Editer</a> </p>
+                    </td>
+                    <td>
+                        <p > <a class="btn btn-danger" href ="{{route('category_delete',['id'=>$nom->id])}}" >Suprimer</a> </p>
                     </td>
                 </tr>
             @endforeach

@@ -19,16 +19,19 @@ Route::get('/projet',function(){
 Route::get("/produits/{id}","ProductsController@show");
 
 Route::get('/cours', 'CoursController@index')->name('cour_index');
-Route::get('/cours/create','CoursController@create')->name('cour_create');
-Route::post('/cours/create','CoursController@store')->name('cour_store');
+Route::get('/cours/accueil','CoursController@accueil');
+Route::get('/cours/create','CoursController@create')->name('cour_creates');
+Route::post('/cours/store','CoursController@store')->name('cour_store');
 Route::get('cours/{id}/edit','CoursController@edit')->name('cour_edit');
 Route::patch('cours/{id}/edit','CoursController@update')->name('cour_update');
+Route::get('cours/{id}/destroy','CoursController@destroy')->name('cour_delete');
 
 Route::get('/categories', 'CategoriesController@index')->name('category_index');
 Route::get('/categories/create','CategoriesController@create')->name('category_create');
 Route::post('/categories/create','CategoriesController@store')->name('category_store');
 Route::get('categories/{id}/edit','CategoriesController@edit')->name('category_edit');
 Route::patch('categories/{id}/edit','CategoriesController@update')->name('category_update');
+Route::get('categories/{id}/destroy','CategoriesController@destroy')->name('category_delete');
 
 Route::get('/user', 'UsersController@index')->name('user_index');
 Route::get('/user/create','UsersController@create')->name('user_create');

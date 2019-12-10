@@ -4,6 +4,7 @@
     <list default="true" id="8b21cce6-bdfa-4a60-9eba-6c12373054c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/cours/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/index.blade.php" afterDir="false" />
@@ -16,6 +17,20 @@
       <change beforePath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/cours/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/index.blade.php" afterDir="false" />
 >>>>>>> view
+=======
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoursController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+>>>>>>> mardi
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +153,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1UKjZ7xp6w10z77BDCwNxpHJXhM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -200,11 +217,15 @@
       <workItem from="1575568352523" duration="10414000" />
       <workItem from="1575579305377" duration="50000" />
       <workItem from="1575715290722" duration="2936000" />
+      <workItem from="1575998865799" duration="4196000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575718875550">
@@ -219,9 +240,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="33" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1575113683265" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1575715297740">
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1575998867207">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1575715297740" />
 =======
@@ -231,5 +253,8 @@
     </state>
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1575722815432" />
 >>>>>>> view
+=======
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1575998867207" />
+>>>>>>> mardi
   </component>
 </project>
