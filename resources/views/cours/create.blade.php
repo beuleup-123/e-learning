@@ -7,7 +7,7 @@
             @endforeach
         @endif
 
-        <form action="{{route('cour_store')}}" method="post">
+        <form action="{{route('cour_store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div>
                 <input type="text" name="nom" class="form-control" placeholder="nom cours">
@@ -17,6 +17,9 @@
             </div>
             <div>
                 <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="La description"></textarea>
+            </div>
+            <div>
+                <input type="file" name="product_image" class="form-control">
             </div>
             <div>
                 <select name="category_id" id="category_id" class="form-control">
