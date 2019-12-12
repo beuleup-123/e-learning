@@ -14,6 +14,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 <th>Category</th>
+                <th>Image</th>
                 <th>Editer</th>
                 <th>Suprimer</th>
             </tr>
@@ -25,7 +26,10 @@
                     <td>{{$cours->type}}</td>
                     <td>{{$cours->description}}</td>
                     <td>{{$cours->category_id}}</td>
-                    <!-- <td><a href="" class="byn btn-primary">Editer</a></td> -->
+                    <td>
+                        <img src="{{$cours->image ? asset($cours->image) : asset('uploads/images/imag5.jpg')}}" alt="{{$cours->name}}" width="50">
+                    </td>
+
                     <td>
                         <p> <a class="btn btn-warning" href ="{{route('cour_edit',['id'=>$cours->id])}}">Editer</a> </p>
                     </td>

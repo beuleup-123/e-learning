@@ -20,13 +20,14 @@
             </div>
             <div>
                 <select name="category_id" id="category_id" class="form-control">
-                    <option value=""></option>
                     @foreach($categories as $key => $value)
                         <option value="{{$key}}">{{$value}}</option>
                     @endforeach
                 </select>
             </div>
-
+            <div>
+                <input type="file" name="cour_image" class="form-control">
+            </div>
             <div>
                 <button class="btn btn-primary">Enregistrer</button>
             </div>

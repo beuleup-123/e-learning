@@ -14,7 +14,7 @@ class AddImageToCours extends Migration
     public function up()
     {
         Schema::table('cours', function (Blueprint $table) {
-            //
+            $table->string("image")->after('category_id')->nullable(true);
         });
     }
 
