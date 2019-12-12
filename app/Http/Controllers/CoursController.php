@@ -40,7 +40,7 @@ class CoursController extends Controller
         $cours->category_id = $request->input('category_id');
         $cours->save();
 
-        return redirect()->route('/cours')->with(['success' => "cours enregistré"]);
+        return redirect()->route('cour_index')->with(['success' => "cours enregistré"]);
 
 
     }
@@ -65,10 +65,18 @@ class CoursController extends Controller
             $cours->save();
         }
 
-        return redirect('/cours')->with(['success' => "modification enregistré"]);
+        return redirect()->route('cour_index')->with(['success' => "modification enregistré"]);
 
 
     }
+    public function destroy($id)
+    {
+        $cours = Cour::find($id);
+        if($cours)
+            $cours->delete();
+        return redirect()->route('cour_index')->with(['success' => "Vos donnees ont ete suprimees"]);
+    }
+
 
 }
 //

@@ -5,7 +5,7 @@
             <div class="alert alert-success">{{session('success')}}</div>
         @endif
     <div>
-        <a href="{{route('cour_store')}}" class="btn btn-primary">Ajouter des Cours</a>
+        <a href="{{route('cour_create')}}" class="btn btn-primary">Ajouter des Cours</a>
     </div>
         <table class="table table-striped">
             <tr>

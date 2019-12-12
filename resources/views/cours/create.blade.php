@@ -19,9 +19,6 @@
                 <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="La description"></textarea>
             </div>
             <div>
-                <input type="file" name="product_image" class="form-control">
-            </div>
-            <div>
                 <select name="category_id" id="category_id" class="form-control">
                     <option value=""></option>
                     @foreach($categories as $key => $value)
