@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Cour;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -31,7 +33,8 @@ class HomeController extends Controller
     }
     public function format()
     {
-        return view('projet.formation');
+        $cours = Cour::orderBy('created_at', 'DESC')->get();
+        return view('projet.formation',compact('cours'));
     }
 
 }

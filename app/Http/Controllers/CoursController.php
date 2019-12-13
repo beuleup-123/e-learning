@@ -36,7 +36,7 @@ class CoursController extends Controller
             'nom'=>'required|min:5',
             'type' => 'required|max:7|string',
             'description' => 'max:1000000',
-           "cour_image" => 'nullable | image | mimes:jpeg,png,jpg,gif | max: 2548'
+           "cour_image" => 'nullable| mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);
         $cours = new Cour();
         //On verfie si une image est envoyée
@@ -76,7 +76,7 @@ class CoursController extends Controller
             'nom'=>'required|min:5',
             'type' => 'required|max:7|string',
             'description' => 'max:1000000',
-            "cour_image" => 'nullable | image | mimes:jpeg,png,jpg,gif | max: 2548'
+            "cour_image" => 'nullable | image | mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);
 
         $cours = Cour::find($id);
