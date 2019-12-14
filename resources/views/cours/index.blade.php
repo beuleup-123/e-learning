@@ -14,7 +14,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 <th>Category</th>
-                <th>Image</th>
+                <th>Fichier</th>
                 <th>Editer</th>
                 <th>Suprimer</th>
             </tr>
@@ -27,7 +27,7 @@
                     <td>{{$cours->description}}</td>
                     <td>{{$cours->category_id}}</td>
                     <td>
-                        <img src="{{$cours->image ? asset($cours->image) : asset('uploads/images/imag5.jpg')}}" alt="{{$cours->nom}}" width="50">
+                        <p>{{$cours->nom}}</p>
                     </td>
 
                     <td>

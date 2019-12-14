@@ -36,21 +36,21 @@ class CoursController extends Controller
             'nom'=>'required|min:5',
             'type' => 'required|max:7|string',
             'description' => 'max:1000000',
-           "cour_image" => 'nullable| mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
+           "cour_fichier" => 'nullable| mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);
         $cours = new Cour();
-        //On verfie si une image est envoyée
-        if($request->has('cour_image')){
-            //On enregistre l'image dans un dossier
-            $image = $request->file('cour_image');
-            //Nous allons definir le nom de notre image en combinant le nom du produit et un timestamp
-            $image_name = Str::slug($request->input('cour_image')).'_'.time();
-            //Nous enregistrerons nos fichiers dans /uploads/images dans public
-            $folder = '/uploads/images/';
-            //Nous allons enregistrer le chemin complet de l'image dans la BD
-            $cours->image = $folder.$image_name.'.'.$image->getClientOriginalExtension();
-            //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la methode uploadImage();
-            $this->uploadImage($image, $folder, 'public', $image_name);
+        //On verfie si une cours est envoyée
+        if($request->has('cour_fichier')){
+            //On enregistre le fichier dans un dossier
+            $fichier = $request->file('cour_fichier');
+            //Nous allons definir le nom de notre fichier en combinant le nom du cours et un timestamp
+            $fichier_name = Str::slug($request->input('cour_fichier')).'_'.time();
+            //Nous enregistrerons nos fichiers dans /uploads/cours dans public
+            $folder = '/uploads/cours/';
+            //Nous allons enregistrer le chemin complet du fichier dans la BD
+            $cours->image = $folder.$fichier_name.'.'.$fichier->getClientOriginalExtension();
+            //Maintenant nous pouvons enregistrer le fichier dans le dossier en utilisant la methode uploadFile();
+            $this->uploadFile($fichier, $folder, 'public', $fichier_name);
         }
 
         $cours->nom = $request->input('nom');
@@ -76,7 +76,7 @@ class CoursController extends Controller
             'nom'=>'required|min:5',
             'type' => 'required|max:7|string',
             'description' => 'max:1000000',
-            "cour_image" => 'nullable | image | mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
+            "cour_fichier" => 'nullable | mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);
 
         $cours = Cour::find($id);
@@ -84,17 +84,17 @@ class CoursController extends Controller
         return redirect('/Cour');*/
         if ($cours)
         {
-            if($request->has('cour_image')){
+            if($request->has('cour_fichier')){
                 //On enregistre l'image dans une variable
-                $image = $request->file('cour_image');
+                $fichier = $request->file('cour_fichier');
                 if(file_exists(public_path().$cours->image))//On verifie si le fichier existe
                     Storage::delete(asset($cours->image));//On le supprime alors
-                //Nous enregistrerons nos fichiers dans /uploads/images dans public
-                $folder = '/uploads/images/';
-                $image_name = Str::slug($request->input('cour_image')).'_'.time();
-                $cours->image = $folder.$image_name.'.'.$image->getClientOriginalExtension();
-                //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la méthode uploadImage();
-                $this->uploadImage($image, $folder, 'public', $image_name);
+                //Nous enregistrerons nos fichiers dans /uploads/cours dans public
+                $folder = '/uploads/cours/';
+                $fichier_name = Str::slug($request->input('cour_fichier')).'_'.time();
+                $cours->image = $folder.$fichier_name.'.'.$fichier->getClientOriginalExtension();
+                //Maintenant nous pouvons enregistrer fichier dans le dossier en utilisant la méthode uploadFile();
+                $this->uploadFile($fichier, $folder, 'public', $fichier_name);
             }
 
             $cours->nom = $request->input('nom');
@@ -116,7 +116,7 @@ class CoursController extends Controller
         return redirect()->route('cour_index')->with(['success' => "Vos donnees ont ete suprimees"]);
     }
 
-    public function uploadImage(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
+    public function uploadFile(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
     {
         $name = !is_null($filename) ? $filename : str_random('25');
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);

@@ -10,12 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',function(){
+/*Route::get('/',function(){
     return view('home');
 });
 Route::get('/projet',function(){
     return view('projet.formation');
-});
+});*/
 Route::get("/produits/{id}","ProductsController@show");
 
 Route::get('/cours', 'CoursController@index')->name('cour_index');
@@ -40,6 +40,10 @@ Route::get('/user/{id}/destroy','UsersController@destroy')->name('user_delete');
 Route::patch('/user/{id}/edit','UsersController@update')->name('user_update');
 
 Route::get('/projet/formation','HomeController@format')->name('formation');
+Route::get('/projet/formation/html','HomeController@html')->name('html');
+Route::get('/projet/formation/php','HomeController@php')->name('php');
+Route::get('/projet/formation/css','HomeController@css')->name('css');
+Route::get('/projet/formation/java','HomeController@java')->name('java');
 Route::get('/projet/layout','HomeController@layouts')->name('layout');
 Auth::routes();
 Route::get('/home','HomeController@index')->name('home');

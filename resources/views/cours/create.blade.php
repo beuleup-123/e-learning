@@ -26,7 +26,7 @@
                 </select>
             </div>
             <div>
-                <input type="file" name="cour_image" class="form-control">
+                <input type="file" name="cour_fichier" class="form-control">
             </div>
             <div>
                 <button class="btn btn-primary">Enregistrer</button>
