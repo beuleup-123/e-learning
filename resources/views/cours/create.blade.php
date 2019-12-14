@@ -26,10 +26,16 @@
                 </select>
             </div>
             <div>
-                <input type="file" name="cour_fichier" class="form-control">
+                <input type="file" name="cour_fichier">
             </div>
-            <div>
-                <button class="btn btn-primary">Enregistrer</button>
+            <div class="row">
+                <div class="col-md-10">
+                    <a href="{{route('cour_index')}}" class="btn btn-secondary">Annuler</a>
+                </div>
+                <div class="col-md-2 lg-2">
+                    <button class="btn btn-primary">Enregistrer</button>
+                </div>
+                
             </div>
         </form>
     </div>

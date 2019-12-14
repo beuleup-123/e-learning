@@ -26,9 +26,14 @@
 
                 </select>
             </div>
-
-            <div>
-                <button class="btn btn-primary">Enregistrer</button>
+            <div class="row">
+                <div class="col-10">
+                    <a href="{{route('user_index')}}" class="btn btn-secondary">Annuler</a>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary">Enregistrer</button>
+                </div>
+                
             </div>
         </form>
     </div>

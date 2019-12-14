@@ -36,12 +36,16 @@
                         <h3>Chargez une autre image pour remplacer celle-ci</h3>
                     </div>
                 </div>
-                <div>
-                    <input type="file" name="cour_fichier" class="form-control">
+            <div class="row">
+                <div class="col-10">
+                    <a href="{{route('cour_index')}}" class="btn btn-secondary">Annuler</a>
                 </div>
-                <div>
+                <div class="col-2">
                     <button class="btn btn-primary">Enregistrer</button>
                 </div>
+                
+            </div>
+                
         </form>
     </div>
 @endsection
