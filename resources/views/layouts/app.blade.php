@@ -65,5 +65,15 @@
   <script src="{{asset('js/app.js')}}"></script>
   <script src="{{asset('js/jquery.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-</body>
+
+  <script src="{{ asset('node_modules/tinymce/tinymce.js') }}"></script>
+<script>
+    tinymce.init({
+    selector:'textarea.text',
+    width: 900,
+    height: 300
+    });
+</script>
+
+  </body>
 </html>

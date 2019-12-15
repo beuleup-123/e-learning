@@ -27,6 +27,7 @@
             </div>
             <div>
                 <input type="file" name="cour_fichier">
+                <textarea class="text form-control" name="description"></textarea>
             </div>
             <div class="row">
                 <div class="col-md-10">
