@@ -37,4 +37,25 @@ class HomeController extends Controller
         return view('projet.formation',compact('cours'));
     }
 
+    public function html()
+    {
+        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',1)->get();
+        return view('projet.htmls',compact('cours'));
+    }
+    public function php()
+    {
+        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',1)->get();
+        return view('projet.php',compact('cours'));
+    }
+    public function css()
+    {
+        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',1)->get();
+        return view('projet.css',compact('cours'));
+    }
+    public function java()
+    {
+        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',1)->get();
+        return view('projet.java',compact('cours'));
+    }
+  
 }

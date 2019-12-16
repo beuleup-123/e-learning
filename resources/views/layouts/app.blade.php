@@ -25,7 +25,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('formation')}}" >Formations</a>
+              <a class="nav-link" href="{{route('formation')}}" >Formations
+                  <span class="sr-only">(current)</span>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html" src="contact.html">Contact</a>

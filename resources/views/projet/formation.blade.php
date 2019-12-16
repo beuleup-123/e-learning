@@ -28,7 +28,7 @@
             <!-- Blog Post -->
             <hr width="50">
             <div class="card mb-4">
-                <table class="table table-striped">
+                <table class="table table-borderless">
                     <tr>
                     </tr>
 
@@ -36,13 +36,10 @@
                         <tr>
                             <td></td>
                             <td>
-                                <a href="{{$cours->image ? asset($cours->image) : asset('uploads/images/imag5.jpg')}}">{{$cours->nom}}</a>
+                                <a href="{{$cours->image ? asset($cours->image) : asset('uploads/cours/imag5.jpg')}}">{{$cours->nom}}</a>
                             </td>
                             <td>{{$cours->type}}</td>
-                            <td>{{$cours->created_at}}</td>
-
-
-
+                            <td>{{$cours->updated_at}}</td>
                         </tr>
                     @endforeach
                 </table>
@@ -77,20 +74,20 @@
                         <div class="col-lg-6">
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a href="#">Web Design</a>
+                                    <a href="{{route('html')}}">PHP</a>
                                 </li>
                                 <li>
-                                    <a href="#">HTML</a>
+                                    <a href="{{route('html')}}">HTML</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a href="#">JavaScript</a>
+                                    <a href="{{route('java')}}">JavaScript</a>
                                 </li>
                                 <li>
-                                    <a href="#">CSS</a>
+                                    <a href="{{route('css')}}">CSS</a>
                                 </li>
                             </ul>
                         </div>

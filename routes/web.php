@@ -40,6 +40,10 @@ Route::get('/user/{id}/destroy','UsersController@destroy')->name('user_delete');
 Route::patch('/user/{id}/edit','UsersController@update')->name('user_update');
 
 Route::get('/projet/formation','HomeController@format')->name('formation');
+Route::get('/projet/html','HomeController@html')->name('html');
+Route::get('/projet/php','HomeController@php')->name('php');
+Route::get('/projet/css','HomeController@css')->name('css');
+Route::get('/projet/java','HomeController@java')->name('java');
 Route::get('/projet/layout','HomeController@layouts')->name('layout');
 Auth::routes();
 Route::get('/home','HomeController@index')->name('home');

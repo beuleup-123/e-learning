@@ -46,7 +46,7 @@ class CoursController extends Controller
             //Nous allons definir le nom de notre image en combinant le nom du produit et un timestamp
             $image_name = Str::slug($request->input('cour_image')).'_'.time();
             //Nous enregistrerons nos fichiers dans /uploads/images dans public
-            $folder = '/uploads/images/';
+            $folder = '/uploads/cours/';
             //Nous allons enregistrer le chemin complet de l'image dans la BD
             $cours->image = $folder.$image_name.'.'.$image->getClientOriginalExtension();
             //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la methode uploadImage();
@@ -76,7 +76,7 @@ class CoursController extends Controller
             'nom'=>'required|min:5',
             'type' => 'required|max:7|string',
             'description' => 'max:1000000',
-            "cour_image" => 'nullable | image | mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
+            "cour_image" => 'nullable| mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);
 
         $cours = Cour::find($id);
@@ -90,7 +90,7 @@ class CoursController extends Controller
                 if(file_exists(public_path().$cours->image))//On verifie si le fichier existe
                     Storage::delete(asset($cours->image));//On le supprime alors
                 //Nous enregistrerons nos fichiers dans /uploads/images dans public
-                $folder = '/uploads/images/';
+                $folder = '/uploads/cours/';
                 $image_name = Str::slug($request->input('cour_image')).'_'.time();
                 $cours->image = $folder.$image_name.'.'.$image->getClientOriginalExtension();
                 //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la méthode uploadImage();
