@@ -46,6 +46,6 @@ Route::get('/projet/formation/css','HomeController@css')->name('css');
 Route::get('/projet/formation/java','HomeController@java')->name('java');
 Route::get('/projet/layout','HomeController@layouts')->name('layout');
 Auth::routes();
-Route::get('/home','HomeController@index')->name('home');
+Route::get('/','HomeController@index')->name('home');
 
 
