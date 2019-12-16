@@ -70,8 +70,14 @@
 <script>
     tinymce.init({
     selector:'textarea.text',
-    width: 900,
-    height: 300
+    width: 1110,
+    height: 300,
+     forced_root_block : false,
+      force_br_newlines : true,
+      force_p_newlines : false,
+      branding: false,
+      elementpath: false
+
     });
 </script>
 

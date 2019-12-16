@@ -34,7 +34,7 @@ class CoursController extends Controller
         return redirect('/Cour');*/
         $data = $request->validate([
             'nom'=>'required|min:5',
-            'type' => 'required|max:7|string',
+            'type' => 'required|max:20|string',
             'description' => 'max:1000000',
            "cour_fichier" => 'nullable| mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);
@@ -74,7 +74,7 @@ class CoursController extends Controller
     {
         $data = $request->validate([
             'nom'=>'required|min:5',
-            'type' => 'required|max:7|string',
+            'type' => 'required|max:20|string',
             'description' => 'max:1000000',
             "cour_fichier" => 'nullable | mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);

@@ -36,9 +36,10 @@
                         <tr>
                             <td></td>
                             <td>
-                                <a href="{{$cours->image ? asset($cours->image) : asset('uploads/cours/Apprendre le CSS.pdf')}}">{{$cours->nom}}</a>
+                                <!--a href="{{$cours->image ? asset($cours->image) : asset('uploads/cours/Apprendre le CSS.pdf')}}">{{$cours->nom}}</a-->
+                                 <a href="{{$cours->description ? asset($cours->description) : asset('uploads/cours/Apprendre le CSS.pdf')}}">{{$cours->nom}}</a>
                             </td>
-                            <td>{{$cours->type}}</td>
+                            <td>{{$cours->description}}</td>
                             <td>{{$cours->updated_at}}</td>
                         </tr>
                     @endforeach

@@ -31,10 +31,10 @@
                     </td>
 
                     <td>
-                        <p> <a class="btn btn-warning" href ="{{route('cour_edit',['id'=>$cours->id])}}">Editer</a> </p>
+                        <a class="btn btn-warning" href ="{{route('cour_edit',['id'=>$cours->id])}}">Editer</a> 
                     </td>
                     <td>
-                        <p > <a class="btn btn-danger" href ="{{route('cour_delete',['id'=>$cours->id])}}" >Suprimer</a> </p>
+                         <a class="btn btn-danger" href ="{{route('cour_delete',['id'=>$cours->id])}}" >Suprimer</a>
                     </td>
                 </tr>
             @endforeach
