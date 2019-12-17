@@ -1,6 +1,5 @@
 <?php
 namespace App\Http\Controllers;
-
 use App\category;
 use Illuminate\Http\Request;
 class CategoriesController extends Controller
@@ -13,7 +12,6 @@ class CategoriesController extends Controller
     public function create()
     {
         return view('category.create');
-
     }
     public function store(Request $request)
     {
@@ -24,7 +22,6 @@ class CategoriesController extends Controller
         $categories->save();
         return redirect('/categories');
     }
-
     public function destroy($id)
     {
         $categories = \App\category::find($id);
@@ -32,13 +29,11 @@ class CategoriesController extends Controller
             $categories->delete();
         return redirect()->route('category_index');
     }
-
     public function edit($id)
     {
         $categories = \App\category::find($id);//on recupere le produit
         return view('category.edit', compact('categories'));
     }
-
     public function update(Request $request, $id)
     {
         $categories = category::find($id);
@@ -51,6 +46,4 @@ class CategoriesController extends Controller
         }
         return redirect('/categories');
     }
-
-
 }

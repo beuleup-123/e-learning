@@ -1,22 +1,17 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Cour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-
-
-
 class CoursController extends Controller
 {
-  /*  public function accueil()
-    {
-        $cour =\App\Cour::all();
-        return view('accueils',compact('cour'));
-    }*/
+    /*  public function accueil()
+      {
+          $cour =\App\Cour::all();
+          return view('accueils',compact('cour'));
+      }*/
     public function index()
     {
         $cours = Cour::orderBy('created_at', 'DESC')->get();
@@ -27,7 +22,6 @@ class CoursController extends Controller
         $categories = \App\category::pluck('nom','id');
         return view('cours.create', compact('categories'));
     }
-
     public function store(Request $request)
     {
         /*Cour::create(['nom'=>$request->input('nom')]);
@@ -36,7 +30,7 @@ class CoursController extends Controller
             'nom'=>'required|min:5',
             'type' => 'required|max:20|string',
             'description' => 'max:1000000',
-           "cour_fichier" => 'nullable| mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
+            "cour_fichier" => 'nullable| mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);
         $cours = new Cour();
         //On verfie si une cours est envoyée
@@ -52,16 +46,12 @@ class CoursController extends Controller
             //Maintenant nous pouvons enregistrer le fichier dans le dossier en utilisant la methode uploadFile();
             $this->uploadFile($fichier, $folder, 'public', $fichier_name);
         }
-
         $cours->nom = $request->input('nom');
         $cours->type = $request->input('type');
         $cours->description = $request->input('description');
         $cours->category_id = $request->input('category_id');
         $cours->save();
-
         return redirect()->route('cour_index')->with(['success' => "cours enregistré"]);
-
-
     }
     public function edit($id)
     {
@@ -69,7 +59,6 @@ class CoursController extends Controller
         $categories = \App\category::pluck('nom','id');
         return view('cours.edit', compact('cours','categories'));
     }
-
     public function update(Request $request, $id)
     {
         $data = $request->validate([
@@ -78,7 +67,6 @@ class CoursController extends Controller
             'description' => 'max:1000000',
             "cour_fichier" => 'nullable | mimes:jpeg,png,jpg,gif,pdf,doc | max: 2548'
         ]);
-
         $cours = Cour::find($id);
         /*Cour::create(['nom'=>$request->input('nom')]);
         return redirect('/Cour');*/
@@ -96,17 +84,13 @@ class CoursController extends Controller
                 //Maintenant nous pouvons enregistrer fichier dans le dossier en utilisant la méthode uploadFile();
                 $this->uploadFile($fichier, $folder, 'public', $fichier_name);
             }
-
             $cours->nom = $request->input('nom');
             $cours->type = $request->input('type');
             $cours->description = $request->input('description');
             $cours->category_id = $request->input('category_id');
             $cours->save();
         }
-
         return redirect()->route('cour_index')->with(['success' => "modification enregistré"]);
-
-
     }
     public function destroy($id)
     {
@@ -120,12 +104,6 @@ class CoursController extends Controller
     {
         $name = !is_null($filename) ? $filename : str_random('25');
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
-
         return $file;
     }
-
-
-
-
-    }
-//
+}

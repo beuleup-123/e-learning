@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Cour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-
 class HomeController extends Controller
 {
     /**
@@ -15,9 +12,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-       // $this->middleware('auth');
+        // $this->middleware('auth');
     }
-
     /**
      * Show the application dashboard.
      *
@@ -25,7 +21,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-      return view('home');
+        return view('home');
     }
     public function layouts()
     {
@@ -56,5 +52,4 @@ class HomeController extends Controller
         $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',4)->get();
         return view('projet.formation',compact('cours'));
     }
-
 }

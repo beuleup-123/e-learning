@@ -20,6 +20,7 @@
             </div>
             <div>
                 <select name="status" id="status" class="form-control" placeholder="status">
+
                         <option value="Adiministrateur">Adiministrateur</option>
                         <option value="Etudiant">Etudiant</option>
                         <option value="Professeur">Professeur</option>
@@ -33,7 +34,6 @@
                 <div class="col-2">
                     <button class="btn btn-primary">Enregistrer</button>
                 </div>
-                
             </div>
         </form>
     </div>

@@ -27,9 +27,8 @@
                 <div class="col-2">
                     <button class="btn btn-primary">Enregistrer</button>
                 </div>
-                
+
             </div>
-            
         </form>
     </div>
 

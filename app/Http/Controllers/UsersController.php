@@ -1,9 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
-
 class UsersController extends Controller
 {
     public function index()
@@ -30,7 +28,6 @@ class UsersController extends Controller
         $user->password = $request->input('password');
         $user->status = $request->input('status');
         $user->save();
-
         return redirect()->route('user_index')->with(['success' => "Vos données sont enregistrées"]);
     }
     public function edit($id)
@@ -45,7 +42,6 @@ class UsersController extends Controller
             $user->delete();
         return redirect()->route('user_index');
     }
-
     public function update(Request $request, $id)
     {
         $user = User::find($id);
@@ -60,9 +56,5 @@ class UsersController extends Controller
             $user->save();
         }
         return redirect('/user')->with(['success' => "modification enregistré"]);
-
-
     }
-
-
 }

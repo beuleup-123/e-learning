@@ -36,9 +36,8 @@
                 <div class="col-md-2 lg-2">
                     <button class="btn btn-primary">Enregistrer</button>
                 </div>
-                
+
             </div>
-                
         </form>
     </div>
 @endsection
