@@ -42,7 +42,7 @@ $cours->type = $request->input('type');
 $cours->description = $request->input('description');
 $cours->category_id = $request->input('category_id');
 $cours->save();
-return redirect()->route('/cours')->with(['success' => "cours enregistré"]);
+return redirect()->route('cour_index')->with(['success' => "cours enregistré"]);
 }
 public function edit($id)
 {
@@ -63,6 +63,6 @@ $cours->description = $request->input('description');
 $cours->category_id = $request->input('category_id');
 $cours->save();
 }
-return redirect('/cours')->with(['success' => "modification enregistré"]);
+return redirect()->route('cour_index')->with(['success' => "modification enregistré"]);
 }
 }
