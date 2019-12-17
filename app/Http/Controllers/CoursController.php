@@ -106,4 +106,6 @@ class CoursController extends Controller
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
         return $file;
     }
+
+
 }

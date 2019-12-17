@@ -70,42 +70,52 @@
         selector:'textarea.text',
         width: 1110,
         height: 300,
-        //icons: 'material',
-        forced_root_block : false,
-        force_br_newlines : true,
-        force_p_newlines : false,
-        branding: false,
-        elementpath: false,
-        toolbar_drawer: 'sliding',
 
-    file_picker_callback: function(callback, value, meta) {
-            // Provide file and text for the link dialog
-            if (meta.filetype == 'file') {
-                callback('mypage.html', {text: 'My text'});
-            }
-
-            // Provide image and alt text for the image dialog
-            if (meta.filetype == 'image') {
-                callback('myimage.jpg', {alt: 'My alt text'});
-            }
-
-            // Provide alternative source and posted for the media dialog
-            if (meta.filetype == 'media') {
-                callback('movie.mp4', {source2: 'alt.ogg', poster: 'image.jpg'});
-            }
-        },
         resize: false,
-        autosave_ask_before_unload: false,
-       /** mentions_fetch: mentionsFetchFunction,
-        powerpaste_allow_local_images: true,*/
+       /*
+
         plugins: [
-            "a11ychecker advcode advlist anchor autolink codesample fullscreen help image imagetools tinydrive",
-            " lists link media noneditable powerpaste preview",
-            " searchreplace table template tinymcespellchecker visualblocks wordcount mentions"
-        ]
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks advcode fullscreen',
+            'insertdatetime media table contextmenu powerpaste tinymcespellchecker a11ychecker linkchecker mediaembed',
+            'wordcount formatpainter permanentpen pageembed checklist casechange'
+        ],
+        toolbar: 'undo redo | insert | styleselect | bold italic formatpainter permanentpen pageembed | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | advcode spellchecker a11ycheck | code | checklist | casechange',
+        toolbar_drawer: 'sliding',
+        permanentpen_properties: {
+            fontname: 'arial,helvetica,sans-serif',
+            forecolor: '#FF0000',
+            fontsize: '18pt',
+            hilitecolor: '',
+            bold: true,
+            italic: false,
+            strikethrough: false,
+            underline: false
+        },
+        table_toolbar: "tableprops cellprops tabledelete | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol",
+        powerpaste_allow_local_images: true,
+        powerpaste_word_import: 'prompt',
+        powerpaste_html_import: 'prompt',
+        spellchecker_language: 'en',
+        spellchecker_dialog: true,
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tinymce.com/css/codepen.min.css']*/
+        menubar: true,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks advcode fullscreen',
+            'insertdatetime media table contextmenu powerpaste'
+        ],
+        toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image code',
+        powerpaste_allow_local_images: true,
+        powerpaste_word_import: 'prompt',
+        powerpaste_html_import: 'prompt',
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tinymce.com/css/codepen.min.css']
     });
-    tinymce.activeEditor.execCommand('mceShowCharmap');
-    tinymce.activeEditor.execCommand('mceSpellCheck');
+>>>>>>> mardi
 </script>
 
 </body>

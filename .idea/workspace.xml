@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b21cce6-bdfa-4a60-9eba-6c12373054c7" name="Default Changelist" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_10_205008_add_image_to_cours.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
@@ -60,6 +61,25 @@
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
 >>>>>>> lundi
+=======
+      <change afterPath="$PROJECT_DIR$/public/uploads/Apprendre le CSS.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/Apprendre le HTML.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/Apprendre le Javascript.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/Apprendre le PHP.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/Installation du serveur http Apache sur un systeme Linux.pptx (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/Le framework CSS Bootstrap.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/Le framework Laravel.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/PHP Orienté Objet.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoursController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cours/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projet/formation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projet/formation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+>>>>>>> mardi
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
