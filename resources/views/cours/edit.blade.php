@@ -24,9 +24,7 @@
                 </select>
             </div>
             <div>
-<
                 <textarea name="description" id="description" cols="30" rows="10" class="text form-control" > </textarea>
->
             </div>
             <div>
                 <input type="file" name="cour_fichier">
