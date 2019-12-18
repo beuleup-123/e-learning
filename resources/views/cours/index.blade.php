@@ -12,7 +12,6 @@
                 <th></th>
                 <th>Nom cours</th>
                 <th>Type</th>
-                <th>Description</th>
                 <th>Category</th>
                 <th>Fichier</th>
                 <th>Editer</th>
@@ -23,7 +22,6 @@
                     <td></td>
                     <td>{{$cours->nom}} </td>
                     <td>{{$cours->type}}</td>
-                    <td>{{$cours->description}}</td>
                     <td>{{$cours->category_id}}</td>
                     <td>
                         <p>{{$cours->nom}}</p>

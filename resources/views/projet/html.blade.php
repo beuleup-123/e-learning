@@ -20,13 +20,13 @@
 
                     <div class="card-body">
                         <p>{!! $cours->description !!}</p>
-                        <a href="#" class="btn btn-primary">Lire la suite &rarr;</a>
+                    <!--    <a href="#" class="btn btn-primary">Lire la suite &rarr;</a> -->
                     </div>
                     <div class=" row card-footer text-muted ">
                         <div class="col-8"><p>{{$cours->updated_at}}</p></div>
-                        <div class="col-5"> <a href="#">HackWeb</a></div>
+                        <div class="col-5"> <a href="#">HOMEdu</a></div>
                     </div>
-            @endforeach
+              @endforeach
             <!-- Pagination -->
                 <ul class="pagination justify-content-center mb-4">
                     <li class="page-item">

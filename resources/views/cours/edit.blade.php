@@ -24,8 +24,7 @@
                 </select>
             </div>
             <div>
-                <textarea name="description" id="description" cols="30" rows="10" class="text form-control" > </textarea>
-            </div>
+               <textarea name="description" id="description" cols="30" rows="10" class="text form-control" ><p>{{$cours->description}}</p> </textarea>
             <div>
                 <input type="file" name="cour_fichier">
             </div>

@@ -17,24 +17,31 @@
               <div class="carousel-item active">
                 <img src="{{asset('images/imag3.jpg')}}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Cours en JavaScript</h5>
+                  <h3>Cours en JavaScript</h3>
                   <p>Des cours et des tutoriel detaillees en JavaScript</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="{{asset('images/imag2.jpg')}}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Cours en HTML</h5>
+                  <h3>Cours en HTML</h3>
                   <p>Des cours et des tutoriel detaillees en html.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="{{asset('images/imag1.jpg')}}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Cours en web-design</h5>
-                  <p>Des cours et des tutoriel detaillees en web-design.</p>
+                  <h3>Cours en PHP</h3>
+                  <p>Des cours et des tutoriel detaillees en PHP.</p>
                 </div>
               </div>
+                <div class="carousel-item">
+                    <img src="{{asset('images/imag1.jpg')}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Cours en CSS</h3>
+                        <p>Des cours et des tutoriel detaillees en CSS.</p>
+                    </div>
+                </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -68,7 +75,7 @@
    </div>
 
     <!--
-       
+
 -->
 <div class="row">
 <div class="col-md-5 mb-3">
@@ -80,11 +87,10 @@
 </div>
 </div>
 </div>
-  
+
     <!-- /.row -->
 
-  
+
   <!-- /.container -->
   @endsection
-  
-  
+
