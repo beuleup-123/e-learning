@@ -25,6 +25,14 @@ Route::get('/cours/{id}/edit','CoursController@edit')->name('cour_edit');
 Route::patch('/cours/{id}/edit','CoursController@update')->name('cour_update');
 Route::get('/cours/{id}/destroy','CoursController@destroy')->name('cour_delete');
 
+Route::get('formation', function () {
+    $cours = App\Cour::paginate(1);
+
+    $cours->withPath('custom/url');
+    return view('projet.formation',compact('cours'));
+    //
+});
+
 Route::get('/categories', 'CategoriesController@index')->name('category_index');
 Route::get('/categories/create','CategoriesController@create')->name('category_create');
 Route::post('/categories/store','CategoriesController@store')->name('category_store');

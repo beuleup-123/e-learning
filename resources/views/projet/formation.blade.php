@@ -13,41 +13,26 @@
             </h1>
 
             <!-- Blog Post -->
-            <div class="card mb-4">
-
-                <div class="card-body">
-                    <h2 class="card-title">Homedu</h2>
-                    <p class="card-text">Homedu est site de formation en ligne.Il propose des cours en Web design,en HTML,en JavaScript,css et aussi des Tutorials</p>
-                    <a href="#" class="btn btn-primary">Lire la suite &rarr;</a>
-                </div>
-                <div class="card-footer text-muted">
-                    <a href="#">Homedu</a>
-                </div>
-            </div>
 
             <!-- Blog Post -->
             <hr width="50">
-            <div class="card mb-4">
-                <table class="table ">
-                    <tr>
-                    </tr>
+            @foreach($cours as $cours)
 
-                    @foreach($cours as $cours)
-                        <tr>
-                            <td></td>
-                            <td>
-                                <!--a href="{{$cours->image ? asset($cours->image) : asset('uploads/cours/Apprendre le CSS.pdf')}}">{{$cours->nom}}</a-->
-                                 <a href="{{$cours->description ? asset($cours->description) : asset('uploads/cours/Apprendre le CSS.pdf')}}">{{$cours->nom}}</a>
-                            </td>
-                            <td>{{$cours->description}}</td>
-                            <td>{{$cours->updated_at}}</td>
-                        </tr>
-                    @endforeach
-                </table>
-            </div>
-
-            <!-- Blog Post -->
-            <div class="card mb-5">
+                <div class="card-body">
+                    <p>{!! $cours->description !!}</p>
+                  <!--  <a href="#" class="btn btn-primary">Lire la suite &rarr;</a> -->
+                </div>
+                <div class=" row card-footer text-muted ">
+                    <div class="col-8"><p>{{$cours->updated_at}}</p></div>
+                    <div class="col-4"> <a href="#">HOMEdu</a></div>
+                </div>
+               @endforeach
+              
+            <div class="card-body">
+                @foreach( $cours as $cours)
+                  
+                @endforeach
+                <!--  <a href="#" class="btn btn-primary">Lire la suite &rarr;</a> -->
             </div>
         </div>
 

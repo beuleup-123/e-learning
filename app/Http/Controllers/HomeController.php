@@ -33,8 +33,10 @@ class HomeController extends Controller
     }
     public function format()
     {
-        $cours = Cour::orderBy('created_at', 'DESC')->get();
-        return view('projet.formation',compact('cours'));
+        $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
+       // $cours = Cour::orderBy('created_at', 'DESC')->get();
+        $category = \App\category::pluck('nom','id');
+        return view('projet.formation',compact('cours','category'));
     }
     public function html()
     {

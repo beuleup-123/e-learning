@@ -24,8 +24,7 @@
                 </select>
             </div>
             <div>
-                <textarea name="description" id="description" cols="30" rows="10" class="text form-control" placeholder="La description"></textarea>
-            </div>
+               <textarea name="description" id="description" cols="30" rows="10" class="text form-control" ><p>{{$cours->description}}</p> </textarea>
             <div>
                 <input type="file" name="cour_fichier">
             </div>
@@ -36,9 +35,8 @@
                 <div class="col-md-2 lg-2">
                     <button class="btn btn-primary">Enregistrer</button>
                 </div>
-                
+
             </div>
-                
         </form>
     </div>
 @endsection
