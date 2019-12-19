@@ -27,9 +27,10 @@
                     <div class="col-4"> <a href="#">HOMEdu</a></div>
                 </div>
                @endforeach
+              
             <div class="card-body">
-                @foreach( $cours as $cour)
-                  <li>{{$cour->nom}}</li>
+                @foreach( $cours as $cours)
+                  
                 @endforeach
                 <!--  <a href="#" class="btn btn-primary">Lire la suite &rarr;</a> -->
             </div>

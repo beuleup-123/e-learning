@@ -106,12 +106,18 @@
             if (meta.filetype === 'file') {
                 callback('https://www.google.com/logos/google.jpg', { text: 'My text' });
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> home
             /* Provide image and alt text for the image dialog */
             if (meta.filetype === 'image') {
                 callback('https://www.google.com/logos/google.jpg', { alt: 'My alt text' });
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> home
             /* Provide alternative source and posted for the media dialog */
             if (meta.filetype === 'media') {
                 callback('movie.mp4', { source2: 'alt.ogg', poster: 'https://www.google.com/logos/google.jpg' });
@@ -130,6 +136,7 @@
         noneditable_noneditable_class: "mceNonEditable",
         toolbar_drawer: 'sliding',
         contextmenu: "link image imagetools table",
+<<<<<<< HEAD
 
         images_upload_handler: function (blobInfo, success, failure) {
             var xhr, formData;
@@ -141,17 +148,31 @@
             xhr.onload = function() {
                 var json;
 
+=======
+        images_upload_handler: function (blobInfo, success, failure) {
+            var xhr, formData;
+            xhr = new XMLHttpRequest();
+            xhr.withCredentials = false;
+            xhr.open('POST', 'postAcceptor.php');
+            xhr.onload = function() {
+                var json;
+>>>>>>> home
                 if (xhr.status < 200 || xhr.status >= 300) {
                     failure('HTTP Error: ' + xhr.status);
                     return;
                 }
+<<<<<<< HEAD
 
                 json = JSON.parse(xhr.responseText);
 
+=======
+                json = JSON.parse(xhr.responseText);
+>>>>>>> home
                 if (!json || typeof json.location != 'string') {
                     failure('Invalid JSON: ' + xhr.responseText);
                     return;
                 }
+<<<<<<< HEAD
 
                 success(json.location);
             };
@@ -159,10 +180,20 @@
             formData = new FormData();
             formData.append('file', blobInfo.blob(), fileName(blobInfo));
 
+=======
+                success(json.location);
+            };
+            formData = new FormData();
+            formData.append('file', blobInfo.blob(), fileName(blobInfo));
+>>>>>>> home
             xhr.send(formData);
         }
     });
 </script>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> home

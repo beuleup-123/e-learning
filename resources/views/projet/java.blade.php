@@ -20,7 +20,7 @@
 
                     <div class="card-body">
                         <p>{!! $cours->description !!}</p>
-                       <!-- <a href="#" class="btn btn-primary">Lire la suite &rarr;</a> -->
+                        <!--<a href="#" class="btn btn-primary">Lire la suite &rarr;</a>-->
                     </div>
                     <div class=" row card-footer text-muted ">
                         <div class="col-8"><p>{{$cours->updated_at}}</p></div>
