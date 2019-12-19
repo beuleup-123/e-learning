@@ -28,21 +28,10 @@
                 @endforeach
                 <div class="card-body">
                     @foreach( $cours as $cour)
-                      @endforeach
+                    @endforeach
                 <!--  <a href="#" class="btn btn-primary">Lire la suite &rarr;</a> -->
                 </div>
-                <div class=" row card-footer text-muted ">
-                    <div class="col-8"><p>{{$cours->updated_at}}</p></div>
-                    <div class="col-4"> <a href="#">HOMEdu</a></div>
-                </div>
-               @endforeach
-            <div class="card-body">
-                @foreach( $cours as $cour)
-                  <li>{{$cour->nom}}</li>
-                @endforeach
-                <!--  <a href="#" class="btn btn-primary">Lire la suite &rarr;</a> -->
             </div>
-
             <!-- Sidebar Widgets Column -->
             <div class="col-md-4">
 
