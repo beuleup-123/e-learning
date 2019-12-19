@@ -106,12 +106,10 @@
             if (meta.filetype === 'file') {
                 callback('https://www.google.com/logos/google.jpg', { text: 'My text' });
             }
-
             /* Provide image and alt text for the image dialog */
             if (meta.filetype === 'image') {
                 callback('https://www.google.com/logos/google.jpg', { alt: 'My alt text' });
             }
-
             /* Provide alternative source and posted for the media dialog */
             if (meta.filetype === 'media') {
                 callback('movie.mp4', { source2: 'alt.ogg', poster: 'https://www.google.com/logos/google.jpg' });
@@ -124,41 +122,31 @@
         ],
         template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
         template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
-       // height: 600,
         image_caption: true,
         quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
         noneditable_noneditable_class: "mceNonEditable",
         toolbar_drawer: 'sliding',
         contextmenu: "link image imagetools table",
-
         images_upload_handler: function (blobInfo, success, failure) {
             var xhr, formData;
-
             xhr = new XMLHttpRequest();
             xhr.withCredentials = false;
             xhr.open('POST', 'postAcceptor.php');
-
             xhr.onload = function() {
                 var json;
-
                 if (xhr.status < 200 || xhr.status >= 300) {
                     failure('HTTP Error: ' + xhr.status);
                     return;
                 }
-
                 json = JSON.parse(xhr.responseText);
-
                 if (!json || typeof json.location != 'string') {
                     failure('Invalid JSON: ' + xhr.responseText);
                     return;
                 }
-
                 success(json.location);
             };
-
             formData = new FormData();
             formData.append('file', blobInfo.blob(), fileName(blobInfo));
-
             xhr.send(formData);
         }
     });
