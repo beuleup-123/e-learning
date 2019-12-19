@@ -81,9 +81,13 @@
 <div class="col-md-5 mb-3">
   <a href="inscription.php" class="btn btn-success btn-lg active" role="button" aria-pressed="true">connecter</a>
 </div>
-<div class="col-md-2"> </div>
+<div class="col-md-2">
+    @can('Administrateur')
+        <a class="dropdown-item" href="{{route('backoffice')}}">Back Office</a>
+    @endcan
+</div>
 <div class="col-md-5 mb-3" >
-  <a href="formulaire.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">S'inscrire</a>
+  <a href="/register" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">S'inscrire</a>
 </div>
 </div>
 </div>

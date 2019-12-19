@@ -1,8 +1,13 @@
 <?php
+
 namespace App\Http\Controllers;
+
+use App\category;
 use App\Cour;
+use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -12,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        //$this->middleware('auth');
     }
     /**
      * Show the application dashboard.
@@ -21,35 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Auth::logout();
         return view('home');
     }
-    public function layouts()
-    {
-        return view('layouts.app');
-    }
-    public function format()
-    {
-        $cours = Cour::orderBy('created_at', 'DESC')->get();
-        return view('projet.formation',compact('cours'));
-    }
-    public function html()
-    {
-        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',1)->get();
-        return view('projet.formation',compact('cours'));
-    }
-    public function php()
-    {
-        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',2)->get();
-        return view('projet.formation',compact('cours'));
-    }
-    public function css()
-    {
-        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',3)->get();
-        return view('projet.formation',compact('cours'));
-    }
-    public function java()
-    {
-        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',4)->get();
-        return view('projet.formation',compact('cours'));
-    }
+
 }

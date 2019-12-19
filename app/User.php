@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'status'
     ];
     //protected $guarded = ['password','remember_token'];
 
@@ -43,4 +43,16 @@ use Illuminate\Http\Request;
         return $this->belongsToMany("App\Cour");
         //
     }
+    public function isAdmin(){
+        return strtolower(@$this->status) === 'Administrateur'? true : false;
+    }
+
+    /**Cett méthode va determiner si le user connecté a un role moderator*/
+    public function isModerator(){
+        return strtolower(@$this->status) === 'Professeur'? true : false;
+    }
+    public function isUser(){
+        return strtolower(@$this->status) === 'Etudiant'? true : false;
+    }
+
 }
