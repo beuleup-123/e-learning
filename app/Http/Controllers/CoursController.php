@@ -19,7 +19,7 @@ class CoursController extends Controller
     }
     public function create()
     {
-        $this->authorize('admin');
+        //$this->authorize('Administrateur');
         $categories = \App\category::pluck('nom','id');
         return view('cours.create', compact('categories'));
     }
@@ -42,7 +42,7 @@ class CoursController extends Controller
             $fichier_name = Str::slug($request->input('cour_fichier')).'_'.time();
             //Nous enregistrerons nos fichiers dans /uploads/cours dans public
             $folder = '/uploads/cours/';
-            //Nous allons enregistrer le chemin complet du fichier dans la BD
+            //Nous allons enregistrer le chemin compadminlet du fichier dans la BD
             $cours->image = $folder.$fichier_name.'.'.$fichier->getClientOriginalExtension();
             //Maintenant nous pouvons enregistrer le fichier dans le dossier en utilisant la methode uploadFile();
             $this->uploadFile($fichier, $folder, 'public', $fichier_name);
@@ -56,7 +56,7 @@ class CoursController extends Controller
     }
     public function edit($id)
     {
-        $this->authorize('admin');
+        $this->authorize('Administrateur');
         $cours = \App\Cour::find($id);//on recupere le produit
         $categories = \App\category::pluck('nom','id');
         return view('cours.edit', compact('cours','categories'));

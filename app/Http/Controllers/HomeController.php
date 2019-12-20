@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-       Auth::logout();
+      // Auth::logout();
         return view('home');
     }
     public function layouts()
@@ -59,7 +59,7 @@ class HomeController extends Controller
     }
     public  function  backoffice()
     {
-
+        //Auth::logout();
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         $user = User::orderBy('created_at', 'DESC')->get();
         $categories = category::orderBy('created_at', 'DESC')->get();
