@@ -1,27 +1,21 @@
 <?php
-
 namespace App;
-
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
 class User extends Authenticatable
 {
     use Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array;
-use Illuminate\Http\Request;
-
+    use Illuminate\Http\Request;
      */
     protected $fillable = [
         'name', 'email', 'password', 'status'
     ];
     //protected $guarded = ['password','remember_token'];
-
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -30,7 +24,6 @@ use Illuminate\Http\Request;
     protected $hidden = [
         'password', 'remember_token',
     ];
-
     /**
      * The attributes that should be cast to native types.
      *
@@ -46,7 +39,6 @@ use Illuminate\Http\Request;
     public function isAdmin(){
         return strtolower(@$this->status) === 'Administrateur'? true : false;
     }
-
     /**Cett méthode va determiner si le user connecté a un role moderator*/
     public function isModerator(){
         return strtolower(@$this->status) === 'Professeur'? true : false;
@@ -54,5 +46,4 @@ use Illuminate\Http\Request;
     public function isUser(){
         return strtolower(@$this->status) === 'Etudiant'? true : false;
     }
-
 }

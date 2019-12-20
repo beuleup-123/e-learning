@@ -28,6 +28,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html" src="contact.html">Contact</a>
                     </li>
+                    <li>
+                        @can('Administrateur')
+                            <a class="dropdown-item" href="{{route('backoffice')}}">Back Office</a>
+                        @endcan
+                    </li>
                 </ul>
             </div>
         </div>
@@ -127,6 +132,7 @@
         noneditable_noneditable_class: "mceNonEditable",
         toolbar_drawer: 'sliding',
         contextmenu: "link image imagetools table",
+<<<<<<< HEAD
         images_upload_handler: function (blobInfo, success, failure) {
             var xhr, formData;
             xhr = new XMLHttpRequest();
@@ -147,10 +153,35 @@
             };
             formData = new FormData();
             formData.append('file', blobInfo.blob(), fileName(blobInfo));
+=======
+    images_upload_handler: function (blobInfo, success, failure) {
+        var xhr, formData;
+        xhr = new XMLHttpRequest();
+        xhr.withCredentials = false;
+        xhr.open('POST', 'postAcceptor.php');
+        xhr.onload = function() {
+            var json;
+                    if (xhr.status < 200 || xhr.status >= 300) {
+                        failure('HTTP Error: ' + xhr.status);
+                        return;
+                    }
+                        json = JSON.parse(xhr.responseText);
+                    if (!json || typeof json.location != 'string') {
+                        failure('Invalid JSON: ' + xhr.responseText);
+                        return;
+                    }
+                    success(json.location);
+                };
+                formData = new FormData();
+                formData.append('file', blobInfo.blob(), fileName(blobInfo));
+>>>>>>> vendredi
             xhr.send(formData);
         }
     });
 </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> vendredi
 </body>
 </html>

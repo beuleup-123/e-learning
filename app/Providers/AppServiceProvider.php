@@ -1,9 +1,8 @@
 <?php
 namespace App\Providers;
-
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-
+use App\User;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +12,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Gate::define('admin',function(User $user){
+        Gate::define('Administrateur',function(User $user){
             return $user->isAdmin();
         });
         Gate::define('Professeur', function(User $user){
@@ -23,7 +22,6 @@ class AppServiceProvider extends ServiceProvider
             return $user->isUser();
         });
     }
-
     /**
      * Bootstrap any application services.
      *

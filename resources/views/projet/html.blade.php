@@ -20,7 +20,10 @@
 
                     <div class="card-body">
                         <p>{!! $cours->description !!}</p>
+<<<<<<< HEAD
 
+=======
+>>>>>>> vendredi
                     </div>
                     <div class=" row card-footer text-muted ">
                         <div class="col-8"><p>{{$cours->updated_at}}</p></div>

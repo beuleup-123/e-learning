@@ -96,19 +96,16 @@ class CoursController extends Controller
     }
     public function destroy($id)
     {
-        $this->authorize('admin');
+       $this->authorize('Administrateur');
         $cours = Cour::find($id);
         if($cours)
             $cours->delete();
         return redirect()->route('cour_index')->with(['success' => "Vos donnees ont ete suprimees"]);
     }
-
     public function uploadFile(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
     {
         $name = !is_null($filename) ? $filename : str_random('25');
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
         return $file;
     }
-
-
 }
