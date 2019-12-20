@@ -72,14 +72,14 @@
                 </address>
             </div>
         </div>
-        <!--
-    -->
         <div class="row">
             <div class="col-md-5 mb-3">
                 <a href="/login" class="btn btn-success btn-lg active" role="button" aria-pressed="true">connecter</a>
             </div>
             <div class="col-md-2">
-
+                @can('Administrateur')
+                    <a class="dropdown-item" href="{{route('backoffice')}}">Back Office</a>
+                @endcan
             </div>
             <div class="col-md-5 mb-3" >
                 <a href="/register" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">S'inscrire</a>
@@ -89,5 +89,3 @@
     </div>
     <!-- /.container -->
 @endsection
-
-

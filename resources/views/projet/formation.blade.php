@@ -24,7 +24,6 @@
                             <div class="col-4"> <a href="#">HOMEdu</a></div>
                         </div>
                     @endforeach
-
                     <div class="card-body">
                         @foreach( $cours as $cours)
 
@@ -75,5 +74,8 @@
             </div>
             <!-- /.row -->
     </div>
-    <!-- /.container -->
-@endsection
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+ @endsection
