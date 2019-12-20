@@ -4,37 +4,33 @@
         @if(session('success'))
             <div class="alert alert-success">{{session('success')}}</div>
         @endif
-    <div>
-        <a href="{{route('cour_create')}}" class="btn btn-primary">Ajouter des Cours</a>
-    </div>
+        <div>
+            <a href="{{route('cour_create')}}" class="btn btn-primary">Ajouter des Cours</a>
+        </div>
         <table class="table table-striped">
             <tr>
                 <th></th>
                 <th>Nom cours</th>
                 <th>Type</th>
-                <th>Description</th>
                 <th>Category</th>
-                <th>Image</th>
+                <th>Fichier</th>
                 <th>Editer</th>
                 <th>Suprimer</th>
             </tr>
-
             @foreach($cours as $cours)
                 <tr>
                     <td></td>
                     <td>{{$cours->nom}} </td>
                     <td>{{$cours->type}}</td>
-                    <td>{{$cours->description}}</td>
                     <td>{{$cours->category_id}}</td>
                     <td>
-                        <img src="{{$cours->image ? asset($cours->image) : asset('uploads/images/imag5.jpg')}}" alt="{{$cours->nom}}" width="50">
-                    </td>
-
-                    <td>
-                        <p> <a class="btn btn-warning" href ="{{route('cour_edit',['id'=>$cours->id])}}">Editer</a> </p>
+                        <p>{{$cours->nom}}</p>
                     </td>
                     <td>
-                        <p > <a class="btn btn-danger" href ="{{route('cour_delete',['id'=>$cours->id])}}" >Suprimer</a> </p>
+                        <a class="btn btn-warning" href ="{{route('cour_edit',['id'=>$cours->id])}}">Editer</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href ="{{route('cour_delete',['id'=>$cours->id])}}" >Suprimer</a>
                     </td>
                 </tr>
             @endforeach
