@@ -19,6 +19,7 @@ class CoursController extends Controller
     }
     public function create()
     {
+        $this->authorize('admin');
         $categories = \App\category::pluck('nom','id');
         return view('cours.create', compact('categories'));
     }
@@ -55,6 +56,7 @@ class CoursController extends Controller
     }
     public function edit($id)
     {
+        $this->authorize('admin');
         $cours = \App\Cour::find($id);//on recupere le produit
         $categories = \App\category::pluck('nom','id');
         return view('cours.edit', compact('cours','categories'));
@@ -94,6 +96,7 @@ class CoursController extends Controller
     }
     public function destroy($id)
     {
+        $this->authorize('admin');
         $cours = Cour::find($id);
         if($cours)
             $cours->delete();

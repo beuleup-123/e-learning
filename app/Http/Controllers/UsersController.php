@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 class UsersController extends Controller
 {
     public function index()
@@ -11,6 +12,7 @@ class UsersController extends Controller
     }
     public function create()
     {
+
         return view('user.create');
     }
     public function store(Request $request)
@@ -32,6 +34,7 @@ class UsersController extends Controller
     }
     public function edit($id)
     {
+
         $user = \App\User::find($id);//on recupere le user
         return view('user.edit', compact('user'));
     }
@@ -56,5 +59,9 @@ class UsersController extends Controller
             $user->save();
         }
         return redirect('/user')->with(['success' => "modification enregistré"]);
+    }
+    public function import()
+    {
+        $user = Auth::user();
     }
 }

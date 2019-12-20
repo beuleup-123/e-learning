@@ -107,17 +107,23 @@
                 callback('https://www.google.com/logos/google.jpg', { text: 'My text' });
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> home
+=======
+>>>>>>> 8e131580de71b8a84061bd1dc84c431836373547
             /* Provide image and alt text for the image dialog */
             if (meta.filetype === 'image') {
                 callback('https://www.google.com/logos/google.jpg', { alt: 'My alt text' });
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> home
+=======
+>>>>>>> 8e131580de71b8a84061bd1dc84c431836373547
             /* Provide alternative source and posted for the media dialog */
             if (meta.filetype === 'media') {
                 callback('movie.mp4', { source2: 'alt.ogg', poster: 'https://www.google.com/logos/google.jpg' });
@@ -130,23 +136,24 @@
         ],
         template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
         template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
-       // height: 600,
         image_caption: true,
         quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
         noneditable_noneditable_class: "mceNonEditable",
         toolbar_drawer: 'sliding',
         contextmenu: "link image imagetools table",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e131580de71b8a84061bd1dc84c431836373547
         images_upload_handler: function (blobInfo, success, failure) {
             var xhr, formData;
-
             xhr = new XMLHttpRequest();
             xhr.withCredentials = false;
             xhr.open('POST', 'postAcceptor.php');
-
             xhr.onload = function() {
                 var json;
+<<<<<<< HEAD
 
 =======
         images_upload_handler: function (blobInfo, success, failure) {
@@ -157,28 +164,37 @@
             xhr.onload = function() {
                 var json;
 >>>>>>> home
+=======
+>>>>>>> 8e131580de71b8a84061bd1dc84c431836373547
                 if (xhr.status < 200 || xhr.status >= 300) {
                     failure('HTTP Error: ' + xhr.status);
                     return;
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 json = JSON.parse(xhr.responseText);
 
 =======
                 json = JSON.parse(xhr.responseText);
 >>>>>>> home
+=======
+                json = JSON.parse(xhr.responseText);
+>>>>>>> 8e131580de71b8a84061bd1dc84c431836373547
                 if (!json || typeof json.location != 'string') {
                     failure('Invalid JSON: ' + xhr.responseText);
                     return;
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e131580de71b8a84061bd1dc84c431836373547
                 success(json.location);
             };
-
             formData = new FormData();
             formData.append('file', blobInfo.blob(), fileName(blobInfo));
+<<<<<<< HEAD
 
 =======
                 success(json.location);
@@ -186,6 +202,8 @@
             formData = new FormData();
             formData.append('file', blobInfo.blob(), fileName(blobInfo));
 >>>>>>> home
+=======
+>>>>>>> 8e131580de71b8a84061bd1dc84c431836373547
             xhr.send(formData);
         }
     });

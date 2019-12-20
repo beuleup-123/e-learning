@@ -1,8 +1,13 @@
 <?php
+
 namespace App\Http\Controllers;
+
+use App\category;
 use App\Cour;
+use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -12,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        //$this->middleware('auth');
     }
     /**
      * Show the application dashboard.
@@ -21,9 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Auth::logout();
         return view('home');
     }
-    public function layouts()
+      public function layouts()
     {
         return view('layouts.app');
     }
