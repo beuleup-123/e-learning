@@ -28,7 +28,6 @@ Route::get('formation', function () {
 
     $cours->withPath('custom/url');
     return view('projet.formation',compact('cours'));
-    //
 });
 
 Route::get('/categories', 'CategoriesController@index')->name('category_index');
