@@ -36,11 +36,11 @@ Route::get('/categories/{id}/destroy','CategoriesController@destroy')->name('cat
 Route::get('/user/{id}/edit','UsersController@edit')->name('user_edit');
 Route::get('/user/{id}/destroy','UsersController@destroy')->name('user_delete')->middleware('auth');
 Route::patch('/user/{id}/edit','UsersController@update')->name('user_update');
-Route::get('/projet/formation','HomeController@format')->name('formation');
-Route::get('/projet/formation/html','HomeController@html')->name('html');
-Route::get('/projet/formation/php','HomeController@php')->name('php');
-Route::get('/projet/formation/css','HomeController@css')->name('css');
-Route::get('/projet/formation/java','HomeController@java')->name('java');
+Route::get('/projet/formation','HomeController@format')->name('formation')->middleware('auth');
+Route::get('/projet/formation/html','HomeController@html')->name('html')->middleware('auth');
+Route::get('/projet/formation/php','HomeController@php')->name('php')->middleware('auth');
+Route::get('/projet/formation/css','HomeController@css')->name('css')->middleware('auth');
+Route::get('/projet/formation/java','HomeController@java')->name('java')->middleware('auth');
 Route::get('/projet/layout','HomeController@layouts')->name('layout');
 Auth::routes();
 Route::get('/','HomeController@index')->name('home');
