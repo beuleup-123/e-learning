@@ -1,4 +1,4 @@
-extends("layouts.app")
+@extends("layouts.app")
 @section("content")
     <!-- Page Content -->
     <div class="container">
@@ -13,41 +13,29 @@ extends("layouts.app")
                 </h1>
 
                 <!-- Blog Post -->
-                <div class="card mb-4">
-
-                    <div class="card-body">
-                        <h2 class="card-title">Homedu</h2>
-                        <p class="card-text">Homedu est site de formation en ligne.Il propose des cours en Web design,en HTML,en JavaScript,css et aussi des Tutorials</p>
-                        <a href="#" class="btn btn-primary">Lire la suite &rarr;</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <a href="#">Homedu</a>
-                    </div>
-                </div>
 
                 <!-- Blog Post -->
                 <hr width="50">
-                <div class="card mb-4">
-                    <table class="table table-borderless">
-                        <tr>
-                        </tr>
+                @foreach($cours as $cours)
 
-                        @foreach($cours as $cours)
-                            <tr>
-                                <td></td>
-                                <td>
-                                    <a href="{{$cours->image ? asset($cours->image) : asset('uploads/cours/imag5.jpg')}}">{{$cours->nom}}</a>
-                                </td>
-                                <td>{{$cours->type}}</td>
-                                <td>{{$cours->updated_at}}</td>
-                            </tr>
-                        @endforeach
-                    </table>
-                </div>
-
-                <!-- Blog Post -->
-                <div class="card mb-5">
-                </div>
+                    <div class="card-body">
+                        <p>{!! $cours->description !!}</p>
+                        <!--<a href="#" class="btn btn-primary">Lire la suite &rarr;</a>-->
+                    </div>
+                    <div class=" row card-footer text-muted ">
+                        <div class="col-8"><p>{{$cours->updated_at}}</p></div>
+                        <div class="col-5"> <a href="#">HOMEdu</a></div>
+                    </div>
+            @endforeach
+            <!-- Pagination -->
+                <ul class="pagination justify-content-center mb-4">
+                    <li class="page-item">
+                        <a class="page-link" href="#">&larr; Plus Haut</a>
+                    </li>
+                    <li class="page-item disabled">
+                        <!--a class="page-link" href="#">Plus Bas &rarr;</a-->
+                    </li>
+                </ul>
             </div>
 
             <!-- Sidebar Widgets Column -->
@@ -74,7 +62,7 @@ extends("layouts.app")
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="{{route('html')}}">PHP</a>
+                                        <a href="{{route('php')}}">PHP</a>
                                     </li>
                                     <li>
                                         <a href="{{route('html')}}">HTML</a>
@@ -84,7 +72,7 @@ extends("layouts.app")
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="{{route('java')}}">JavaScript</a>
+                                        <a href="{{route('php')}}">JavaScript</a>
                                     </li>
                                     <li>
                                         <a href="{{route('css')}}">CSS</a>
