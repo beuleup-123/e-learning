@@ -1,22 +1,24 @@
 <?php
 namespace App\Http\Controllers;
 use App\Cour;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+
 class CoursController extends Controller
 {
     /*  public function accueil()
       {
           $cour =\App\Cour::all();
           return view('accueils',compact('cour'));
-      }*/
+      }
     public function index()
     {
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         return view ("cours.index",compact('cours'));
-    }
+    }*/
     public function create()
     {
         //$this->authorize('Administrateur');
@@ -52,7 +54,7 @@ class CoursController extends Controller
         $cours->description = $request->input('description');
         $cours->category_id = $request->input('category_id');
         $cours->save();
-        return redirect()->route('cour_index')->with(['success' => "cours enregistré"]);
+        return redirect()->route('backoffice')->with(['success' => "cours enregistré"]);
     }
     public function edit($id)
     {
@@ -92,15 +94,15 @@ class CoursController extends Controller
             $cours->category_id = $request->input('category_id');
             $cours->save();
         }
-        return redirect()->route('cour_index')->with(['success' => "modification enregistré"]);
+        return redirect()->route('backoffice')->with(['success' => "modification enregistré"]);
     }
     public function destroy($id)
     {
-        $this->authorize('Administrateur');
+        $this->authorize('Administrateur','Professeur');
         $cours = Cour::find($id);
         if($cours)
             $cours->delete();
-        return redirect()->route('cour_index')->with(['success' => "Vos donnees ont ete suprimees"]);
+        return redirect()->route('backoffice')->with(['success' => "Vos donnees ont ete suprimees"]);
     }
     public function uploadFile(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
     {

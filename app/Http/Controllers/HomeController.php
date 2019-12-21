@@ -32,33 +32,43 @@ class HomeController extends Controller
     }
     public function format()
     {
-        Auth::logout();
+        //Auth::logout();
         $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
         // $cours = Cour::orderBy('created_at', 'DESC')->get();
-        $category = \App\category::pluck('nom','id');
+       // $category = \App\category::pluck('nom','id');
+        $category = \App\category::orderBy('created_at', 'DESC')->get();
         return view('projet.formation',compact('cours','category'));
+    }
+    public function cours()
+    {
+        //Auth::logout();
+        //$cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
+         $cours = Cour::orderBy('created_at', 'DESC')->get();
+        // $category = \App\category::pluck('nom','id');
+        //$category = \App\category::orderBy('created_at', 'DESC')->get();
+        return view('projet.formation',compact('cours'));
     }
     public function html()
     {
-        Auth::logout();
+       // Auth::logout();
         $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',1)->get();
         return view('projet.formation',compact('cours'));
     }
     public function php()
     {
-        Auth::logout();
+       // Auth::logout();
         $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',2)->get();
         return view('projet.formation',compact('cours'));
     }
     public function css()
     {
-        Auth::logout();
+        //Auth::logout();
         $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',3)->get();
         return view('projet.formation',compact('cours'));
     }
     public function java()
     {
-        Auth::logout();
+        //Auth::logout();
         $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',4)->get();
         return view('projet.formation',compact('cours'));
     }

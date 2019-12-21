@@ -54,10 +54,10 @@
                 </div>
             </div>
             <div class="col-md-4 mb-5">
-                <h2 class="text-center">Nos Contacts</h2>
+        <h2 class="text-center">Nos Contacts</h2>
                 <hr>
                 <address class="text-center">
-                    <strong style=" text-decoration=blue;">HOMEduc</strong>
+                    <strong style=" text-decoration=blue;">HOMEdu</strong>
                     <br>
                     <abbr title="Adress">Adress:</abbr>
                     linguere
@@ -72,20 +72,20 @@
                 </address>
             </div>
         </div>
+        {{--
         <div class="row">
             <div class="col-md-5 mb-3">
                 <a href="/login" class="btn btn-success btn-lg active" role="button" aria-pressed="true">connecter</a>
             </div>
-            <div class="col-md-2">
-                @can('Administrateur')
-                    <a class="dropdown-item" href="{{route('backoffice')}}">Back Office</a>
-                @endcan
+            <div class="col-md-2 mb-2">
+
             </div>
             <div class="col-md-5 mb-3" >
                 <a href="/register" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">S'inscrire</a>
             </div>
         </div>
         <!-- /.row -->
+        --}}
     </div>
     <!-- /.container -->
 @endsection

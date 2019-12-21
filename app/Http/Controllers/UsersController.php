@@ -62,7 +62,7 @@ class UsersController extends Controller
     }
     public function destroy($id)
     {
-        $this->authorize('Administrateur');
+       // $this->authorize('Administrateur');
         $user = \App\User::find($id);//on recupere le user
         if ($user)
             $user->delete();
