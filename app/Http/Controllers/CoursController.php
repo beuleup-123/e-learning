@@ -96,7 +96,7 @@ class CoursController extends Controller
     }
     public function destroy($id)
     {
-       $this->authorize('Administrateur');
+        $this->authorize('Administrateur');
         $cours = Cour::find($id);
         if($cours)
             $cours->delete();

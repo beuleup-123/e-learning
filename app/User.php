@@ -32,7 +32,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function cours(){
+        public function cours(){
         return $this->belongsToMany("App\Cour");
         //
     }

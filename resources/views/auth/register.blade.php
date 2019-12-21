@@ -11,21 +11,12 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
-<<<<<<< HEAD
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
-=======
-                            <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-                                <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                    @error('name')
->>>>>>> vendredi
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -81,24 +72,6 @@
                                     </select>
                                 </div>
                             </div>
-<<<<<<< HEAD
-                        </div>
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Status') }}</label>
-
-                            <div class="col-md-6">
-                                <select name="status" id="status" class="form-control" placeholder="status">
-
-                                    <option value="Adiministrateur">Adiministrateur</option>
-                                    <option value="Etudiant">Etudiant</option>
-                                    <option value="Professeur">Professeur</option>
-
-                                </select>
-                            </div>
-                        </div>
-=======
->>>>>>> vendredi
-
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
