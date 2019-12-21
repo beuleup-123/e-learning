@@ -37,13 +37,13 @@ class User extends Authenticatable
         //
     }
     public function isAdmin(){
-        return strtolower(@$this->status) === 'Administrateur'? true : false;
+        return strtolower($this->status) === 'administrateur'? true : false;
     }
     /**Cett méthode va determiner si le user connecté a un role moderator*/
     public function isModerator(){
-        return strtolower(@$this->status) === 'Professeur'? true : false;
+        return strtolower(@$this->status) === 'professeur'? true : false;
     }
     public function isUser(){
-        return strtolower(@$this->status) === 'Etudiant'? true : false;
+        return strtolower(@$this->status) === 'etudiant'? true : false;
     }
 }

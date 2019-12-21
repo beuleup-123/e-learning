@@ -13,7 +13,14 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/jquery/jquery.min.js', 'public/js')
+    .js('resources/jquery/jquery.js', 'public/js')
+    .js('resources/jquery/jquery.slim.js', 'public/js')
+    .js('resources/jquery/jquery.slim.min.js', 'public/js')
+    .js('resources/jquery/gulpfile.js', 'public/js')
+    .js('resources/js/bootstrap.js', 'public/js')
     .js('resources/js/bootstrap.bundle.min.js', 'public/js')
+    .js('resources/js/bootstrap.min.js', 'public/js')
+    .js('resources/js/bootstrap.bundle.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .styles(['resources/css/bootstrap.min.css','resources/css/blog-home.css'], 'public/css/all.css');
 mix.copyDirectory('node_modules/tinymce/plugins', 'public/node_modules/tinymce/plugins');

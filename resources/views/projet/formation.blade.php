@@ -82,6 +82,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="card my-4">
+                    @foreach($category as $category)
+                    <h5 class="card-header">{{$category->nom}}</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    @foreach($cours as $cours )
+                                    <li>
+                                        <a href="{{$cours->description}}">{{$cours->nom}}</a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
 
                 <!-- Side Widget -->
                 <div class="card my-4">
