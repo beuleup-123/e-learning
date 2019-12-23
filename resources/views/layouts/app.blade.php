@@ -28,6 +28,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html" src="contact.html">Contact</a>
                     </li>
+                    <p class="nav-link">{{_('|')}}</p>
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Connecter') }}</a>

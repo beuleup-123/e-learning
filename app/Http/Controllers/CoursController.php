@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\category;
 use App\Cour;
 use App\User;
 use Illuminate\Http\Request;
@@ -110,4 +111,9 @@ class CoursController extends Controller
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
         return $file;
     }
+    public function show($id){
+        $category = category::find($id);
+        return view("cours.show", compact('category'));
+    }
+
 }
