@@ -23,7 +23,7 @@ Route::get('/cours/{id}/edit','CoursController@edit')->name('cour_edit')->middle
 Route::patch('/cours/{id}/edit','CoursController@update')->name('cour_update');
 Route::get('/cours/{id}/destroy','CoursController@destroy')->name('cour_delete')->middleware('auth');
 Route::get('formation', function () {
-    $cours = App\Cour::paginate(1);
+    $cours = App\Cour::paginate(4);
     $cours->withPath('custom/url');
     return view('projet.formation',compact('cours'));
 });
