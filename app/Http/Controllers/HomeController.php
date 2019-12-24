@@ -87,4 +87,9 @@ class HomeController extends Controller
 
        Paginator::defaultSimpleView('projet.formations');
     }*/
+    public function show($slug){
+        $index_cours = Cour::where('slug',$slug)->first();
+        return view("projet.formations", compact('index_cours'));
+    }
+
 }

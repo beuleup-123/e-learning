@@ -30,7 +30,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-10">
-                        <a href="{{route('cour_index')}}" class="btn btn-secondary">Annuler</a>
+                        <a href="{{route('backoffice')}}" class="btn btn-secondary">Annuler</a>
                     </div>
                     <div class="col-md-2 lg-2">
                         <button class="btn btn-primary">Enregistrer</button>

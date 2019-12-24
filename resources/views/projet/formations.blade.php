@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             @foreach($autre_cour as $cc)
-                                <a href="{{$cc->description}}"><dl>{{$cc->nom}}</dl></a>
+                                <a href="{{route('index_cour',['slug'=>$cc->slug])}}"><ol>{{$cc->nom}}</ol></a>
                             @endforeach
                         </div>
                     </div>
