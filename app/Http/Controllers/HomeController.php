@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\Paginator;
 use App\category;
 use App\Cour;
 use App\User;
@@ -34,9 +35,10 @@ class HomeController extends Controller
     public function format()
     {
         //Auth::logout();
-       $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
-        // $cours = Cour::orderBy('created_at', 'DESC')->get();
-        return view('projet.formation',compact('cours'));
+      $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
+        $autre_cour = Cour::orderBy('created_at', 'DESC')->get();
+       return view('projet.formations',compact('cours','autre_cour'));
+       // return view('projet.formation', ['cours' => $cours]);
     }
     public function cours()
     {
@@ -45,7 +47,7 @@ class HomeController extends Controller
          $all = Cour::orderBy('created_at', 'DESC')->get();
         // $category = \App\category::pluck('nom','id');
         //$category = \App\category::orderBy('created_at', 'DESC')->get();
-        return view('projet.formation',compact('all'));
+        return view('projet.formations',compact('all'));
     }
     public function html()
     {
@@ -79,4 +81,10 @@ class HomeController extends Controller
         $categories = category::orderBy('created_at', 'DESC')->get();
         return view ("backoffice.index",compact('cours','user','categories'));
     }
+   /* public function boot()
+    {
+        Paginator::defaultView('projet.formations');
+
+       Paginator::defaultSimpleView('projet.formations');
+    }*/
 }
