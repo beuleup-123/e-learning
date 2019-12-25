@@ -26,7 +26,7 @@ class AddImageToCours extends Migration
     public function down()
     {
         Schema::table('cours', function (Blueprint $table) {
-            //
+            Schema::dropIfExists('cours');
         });
     }
 }

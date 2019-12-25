@@ -36,6 +36,10 @@ class User extends Authenticatable
         return $this->belongsToMany("App\Cour");
         //
     }
+    public function comments(){
+        return $this->hasMany("App\Comment");
+        //
+    }
     public function isAdmin(){
         return strtolower($this->status) === 'administrateur'? true : false;
     }

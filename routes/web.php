@@ -49,5 +49,7 @@ Auth::routes();
 Route::get('/','HomeController@index')->name('home');
 Route::get('/backoffice', 'HomeController@backoffice')->name('backoffice');
 Route::get('/home','HomeController@index')->name('home');
+Route::get('/projet/formation/cours/create','CommentController@create')->name('comment_create')->middleware('auth');
+Route::post('/projet/formation/cours/store','CommentController@store')->name('comment_store');
 
 

@@ -13,6 +13,9 @@ class Cour extends Model
         return $this->belongsTo("App\category");
     //
 }
+    public function comments(){
+        return $this->hasMany("App\Comment");
+    }
     public function users(){
         return $this->belongsToMany("App\User");
     }

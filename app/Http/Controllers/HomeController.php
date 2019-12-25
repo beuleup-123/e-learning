@@ -1,11 +1,14 @@
 <?php
 namespace App\Http\Controllers;
+use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Pagination\Paginator;
 use App\category;
 use App\Cour;
 use App\User;
+use Illuminate\Support\Str;
+
 class HomeController extends Controller
 {
     /**
@@ -93,10 +96,11 @@ class HomeController extends Controller
     public function show($slug){
         $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
         $autre_cour = Cour::orderBy('created_at', 'DESC')->get();
+        $comment = Comment::orderBy('created_at', 'DESC')->get();
         //$index_slug = Cour::where('slug',$slug)->first();
         $index_cour = Cour::where('slug',$slug)->paginate(1);
         //dd($index_cour);
-        return view("cours.show", compact('index_cour','cours','autre_cour'));
+        return view("cours.show", compact('index_cour','comment','autre_cour'));
     }
 
 }
