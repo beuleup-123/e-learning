@@ -35,19 +35,22 @@ class HomeController extends Controller
     public function format()
     {
         //Auth::logout();
-      $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
+        $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
         $autre_cour = Cour::orderBy('created_at', 'DESC')->get();
-       return view('projet.formations',compact('cours','autre_cour'));
+        return view('projet.formations',compact('cours','autre_cour'));
        // return view('projet.formation', ['cours' => $cours]);
     }
     public function cours()
     {
         //Auth::logout();
         //$cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
+         //$all = Cour::orderBy('created_at', 'DESC')->get();
+        // $cate    //$cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
          $all = Cour::orderBy('created_at', 'DESC')->get();
         // $category = \App\category::pluck('nom','id');
         //$category = \App\category::orderBy('created_at', 'DESC')->get();
         return view('projet.formations',compact('all'));
+        //$category = \App\category::orderBy('created_at', 'DESC')->get();
     }
     public function html()
     {
@@ -88,8 +91,12 @@ class HomeController extends Controller
        Paginator::defaultSimpleView('projet.formations');
     }*/
     public function show($slug){
-        $index_cours = Cour::where('slug',$slug)->first();
-        return view("projet.formations", compact('index_cours'));
+        $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
+        $autre_cour = Cour::orderBy('created_at', 'DESC')->get();
+        //$index_slug = Cour::where('slug',$slug)->first();
+        $index_cour = Cour::where('slug',$slug)->paginate(1);
+        //dd($index_cour);
+        return view("cours.show", compact('index_cour','cours','autre_cour'));
     }
 
 }

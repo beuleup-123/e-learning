@@ -22,7 +22,7 @@ Route::post('/cours/store','CoursController@store')->name('cour_store');
 Route::get('/cours/{id}/edit','CoursController@edit')->name('cour_edit')->middleware('auth');
 Route::patch('/cours/{id}/edit','CoursController@update')->name('cour_update');
 Route::get('/cours/{id}/destroy','CoursController@destroy')->name('cour_delete')->middleware('auth');
-Route::get("/cours/{slug}/show", 'HomeController@show')->name('index_cour');
+
 /*Route::get('formation', function () {
     $cours = App\Cour::paginate(4);
     $cours->withPath('custom/url');
@@ -39,6 +39,7 @@ Route::get('/user/{id}/destroy','UsersController@destroy')->name('user_delete')-
 Route::patch('/user/{id}/edit','UsersController@update')->name('user_update');
 Route::get('/projet/formation','HomeController@format')->name('formation')->middleware('auth');
 //Route::get('/projet/formation','HomeController@cours')->name('formation')->middleware('auth');
+Route::get("/projet/formation/{slug}/show", 'HomeController@show')->name('show')->middleware('auth');
 Route::get('/projet/formation/html','HomeController@html')->name('html')->middleware('auth');
 Route::get('/projet/formation/php','HomeController@php')->name('php')->middleware('auth');
 Route::get('/projet/formation/css','HomeController@css')->name('css')->middleware('auth');

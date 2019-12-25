@@ -42,9 +42,9 @@
                 </div>
             </div>
         @endforeach
-            <div>
+        {{--    <div>
                 <nav aria-label="..."> {{ $cours->appends(['sort' => 'votes'])->links()}}</nav>
-            </div>
+            </div>--}}
             <!-- Comment with nested comments -->
         </div>
 
@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             @foreach($autre_cour as $cc)
-                                <a href="{{route('index_cour',['slug'=>$cc->slug])}}"><ol>{{$cc->nom}}</ol></a>
+                                <a href="{{route('show',['slug'=>$cc->slug])}}"><ol>{{$cc->nom}}</ol></a>
                             @endforeach
                         </div>
                     </div>
