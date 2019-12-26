@@ -113,7 +113,7 @@ class CoursController extends Controller
     }
     public function show($id){
         $category = category::find($id);
-        return view("cours.show", compact('category'));
+        return view("projet.formation", compact('category'));
     }
 
 }

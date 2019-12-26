@@ -9,7 +9,6 @@
 
                 <!-- Title -->
                 @foreach($index_cour as $cour)
-                    <hr>
                     <h1 class="mt-4">{{$cour->nom}}</h1>
                     <hr>
 
@@ -38,16 +37,16 @@
 
                     <!-- Single Comment -->
                     @foreach($comment as $commentaire)
-                    <div class="media mb-4">
-                        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                        <div class="media-body">
-                            <p> {{$commentaire->description}}</p>
+                        <div class="media mb-4">
+                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                            <div class="media-body">
+                                <p> {{$commentaire->description}}</p>
+                            </div>
                         </div>
-                    </div>
                     @endforeach
                 @endforeach
                 <div>
-                   {{-- <nav aria-label="..."> {{ $index_cour->appends(['sort' => 'votes'])->links()}}</nav>--}}
+                    {{-- <nav aria-label="..."> {{ $index_cour->appends(['sort' => 'votes'])->links()}}</nav>--}}
                 </div>
                 <!-- Comment with nested comments -->
             </div>
@@ -61,7 +60,9 @@
                     <div class="card-body">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Go!</button></span>
+                            <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Go!</button>
+              </span>
                         </div>
                     </div>
                 </div>
@@ -79,7 +80,9 @@
                                         <table class="table table-borderless">
                                             @foreach($cours as $cour)
                                                 <tr>
+                                                    <td></td>
                                                     <td> <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br> </td>
+                                                    <td>{{$cour->updated_at}}</td>
                                                 </tr>
                                             @endforeach
                                         </table>

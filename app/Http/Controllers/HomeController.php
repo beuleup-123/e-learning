@@ -28,8 +28,9 @@ class HomeController extends Controller
     public function index()
     {
       // Auth::logout();
-        $category = category::all()->take(6);
-        return view('home',compact('category'));
+        $cours = Cour::all()->take(6);
+        $category = category::all()->take(5);
+        return view('home',compact('category','cours'));
     }
     public function layouts()
     {
@@ -37,23 +38,13 @@ class HomeController extends Controller
     }
     public function format()
     {
-        //Auth::logout();
-        $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
         $autre_cour = Cour::orderBy('created_at', 'DESC')->get();
-        return view('projet.formations',compact('cours','autre_cour'));
+        $cours = Cour::orderBy('created_at', 'DESC')->get();
+        $comment = Comment::orderBy('created_at', 'DESC')->get();
+        $index_cour = Cour::orderBy('created_at', 'DESC')->paginate(1);
+        $category = category::orderBy('created_at', 'DESC')->get();
+        return view('projet.formations',compact('cours','index_cour','comment','autre_cour','category'));
        // return view('projet.formation', ['cours' => $cours]);
-    }
-    public function cours()
-    {
-        //Auth::logout();
-        //$cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
-         //$all = Cour::orderBy('created_at', 'DESC')->get();
-        // $cate    //$cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
-         $all = Cour::orderBy('created_at', 'DESC')->get();
-        // $category = \App\category::pluck('nom','id');
-        //$category = \App\category::orderBy('created_at', 'DESC')->get();
-        return view('projet.formations',compact('all'));
-        //$category = \App\category::orderBy('created_at', 'DESC')->get();
     }
     public function html()
     {
@@ -94,13 +85,14 @@ class HomeController extends Controller
        Paginator::defaultSimpleView('projet.formations');
     }*/
     public function show($slug){
-        $cours = Cour::orderBy('created_at', 'DESC')->paginate(1);
         $autre_cour = Cour::orderBy('created_at', 'DESC')->get();
+        $cours = Cour::orderBy('created_at', 'DESC')->get();
         $comment = Comment::orderBy('created_at', 'DESC')->get();
         //$index_slug = Cour::where('slug',$slug)->first();
         $index_cour = Cour::where('slug',$slug)->paginate(1);
+        $category = category::orderBy('created_at', 'DESC')->get();
         //dd($index_cour);
-        return view("cours.show", compact('index_cour','comment','autre_cour'));
+        return view("cours.show", compact('index_cour','cours','comment','autre_cour','category'));
     }
 
 }
