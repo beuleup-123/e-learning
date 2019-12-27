@@ -71,31 +71,19 @@
                         @foreach($category as $category)
                             <div class="col-lg-6 col-sm-4 portfolio-item">
                                 <div class="card h-100">
-                                    <h4 class="card-title">
+                                    <h4 class="card-header">
                                         {{$category->nom}}
                                     </h4>
                                     <div class="card-body">
-                                        <table class="table table-borderless">
                                             @foreach($cours as $cour)
-                                                <tr>
-                                                    <td> <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br> </td>
-                                                </tr>
+                                                @if($cour->category_id == $category->id )
+                                                        <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br>
+                                                @endif
                                             @endforeach
-                                        </table>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
-                    </div>
-                    <h5 class="card-header">Autres cours</h5>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                @foreach($autre_cour as $cc)
-                                    <a href="{{route('show',['slug'=>$cc->slug])}}">{{$cc->nom}}</a><br>
-                                @endforeach
-                            </div>
-                        </div>
                     </div>
                 </div>
 

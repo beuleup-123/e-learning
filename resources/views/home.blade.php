@@ -16,11 +16,12 @@
                                    <div class="card-body">
                                        <table class="table table-borderless">
                                            @foreach($cours as $cour)
-                                               <tr>
-                                                   <td></td>
-                                                   <td> <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br> </td>
-                                                   <td>{{$cour->updated_at}}</td>
-                                               </tr>
+                                               @if($cour->category_id == $category->id)
+                                                   <tr>
+                                                        <td> <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br> </td>
+                                                         <td>{{$cour->updated_at}}</td>
+                                                   </tr>
+                                               @endif
                                            @endforeach
                                        </table>
                                    </div>

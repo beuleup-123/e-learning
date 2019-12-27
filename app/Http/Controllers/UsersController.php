@@ -10,18 +10,10 @@ class UsersController extends Controller
          $user = User::orderBy('created_at', 'DESC')->get();
          return view("user.index", compact('user'));
      }
-<<<<<<< HEAD
-
-=======
->>>>>>> samedi
      public function create()
      {
          return view('user.create');
      }
-<<<<<<< HEAD
-
-=======
->>>>>>> samedi
      public function store(Request $request)
      {
          /*Cour::create(['nom'=>$request->input('nom')]);

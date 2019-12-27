@@ -38,6 +38,7 @@ class HomeController extends Controller
     }
     public function format()
     {
+        Auth::logout();
         $autre_cour = Cour::orderBy('created_at', 'DESC')->get();
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         $comment = Comment::orderBy('created_at', 'DESC')->get();
@@ -45,30 +46,6 @@ class HomeController extends Controller
         $category = category::orderBy('created_at', 'DESC')->get();
         return view('projet.formations',compact('cours','index_cour','comment','autre_cour','category'));
        // return view('projet.formation', ['cours' => $cours]);
-    }
-    public function html()
-    {
-       // Auth::logout();
-        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',1)->get();
-        return view('home',compact('cours'));
-    }
-    public function php()
-    {
-       // Auth::logout();
-        $cours = Cour::all()->take(6)->orderBy('created_at', 'DESC')->where('category_id',2)->get();
-        return view('home',compact('cours'));
-    }
-    public function css()
-    {
-        //Auth::logout();
-        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',3)->get();
-        return view('home',compact('cours'));
-    }
-    public function java()
-    {
-        //Auth::logout();
-        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id',4)->get();
-        return view('home',compact('cours'));
     }
     public  function  backoffice()
     {
