@@ -9,7 +9,20 @@ body {
 .container .row{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:stretch;
+    justify-content: stretch;
+}
+#list{
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: flex-start;
+    align-content: stretch;
+}
+h4 #cour_nom{
+    flex: 0 0 100%;
+    max-width: 80%;
 }
 

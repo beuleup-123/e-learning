@@ -38,7 +38,7 @@ class HomeController extends Controller
     }
     public function format()
     {
-        Auth::logout();
+        //Auth::logout();
         $autre_cour = Cour::orderBy('created_at', 'DESC')->get();
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         $comment = Comment::orderBy('created_at', 'DESC')->get();

@@ -56,7 +56,7 @@
                         </li>
                     @endguest
                     <li class="nav-item">
-                        @can('Administrateur' or 'Professeur')
+                        @can('Control')
                             <a class="dropdown-item btn btn-dark btn-lg active" href="{{route('backoffice')}}" role="button" aria-pressed="true">Back Office</a>
                         @endcan
                     </li>

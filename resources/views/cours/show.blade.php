@@ -1,7 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
-
         <div class="row">
 
             <!-- Post Content Column -->
@@ -68,37 +66,27 @@
 
                 <!-- Categories Widget -->
                 <div class="card my-4">
-                    <div class="row bd-example">
+                    <div class="row bd-example" id="list">
                         @foreach($category as $category)
-                            <div class="col-lg-6 col-sm-4 portfolio-item">
-                                <div class="card h-100">
+                            <div class="col-lg-12 col-sm-4 portfolio-item">
+                                <div class="header h-100">
                                     <h4 class="card-header">
                                         {{$category->nom}}
                                     </h4>
                                     <div class="card-body">
-                                            @foreach($cours as $cour)
-                                                @if($cour->category_id == $category->id)
-                                                    <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br>
-                                                @endif
-                                            @endforeach
+                                        @foreach($cours as $cour)
+                                            @if($cour->category_id == $category->id )
+                                                <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br>
+                                            @endif
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                         @endforeach
                     </div>
                 </div>
-                <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Side Widget</h5>
-                    <div class="card-body">
-                        You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-                    </div>
-                </div>
-
             </div>
 
         </div>
         <!-- /.row -->
-
-    </div>
 @endsection
