@@ -17750,7 +17750,7 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/biramendao/www/e_learning/resources/js/bootstrap.bundle.js */"./resources/js/bootstrap.bundle.js");
+module.exports = __webpack_require__(/*! /home/roo/www/projet/e_learning/e-learning/resources/js/bootstrap.bundle.js */"./resources/js/bootstrap.bundle.js");
 
 
 /***/ })

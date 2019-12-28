@@ -81,7 +81,7 @@
 </header>
 
 <div class="container">
-    @yield("content")
+trap    @yield("content")
 </div>
 <!-- /.container -->
 
@@ -93,6 +93,8 @@
     <!-- /.container -->
 </footer>
 <script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/jquery.slim.min.js')}}"></script>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 
