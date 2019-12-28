@@ -59,7 +59,8 @@ class CoursController extends Controller
     }
     public function edit($id)
     {
-        $this->authorize('Administrateur');
+        $this->authorize('Control');
+       // $this->authorize('Professeur');
         $cours = \App\Cour::find($id);//on recupere le produit
         $categories = \App\category::pluck('nom','id');
         return view('cours.edit', compact('cours','categories'));
@@ -99,7 +100,8 @@ class CoursController extends Controller
     }
     public function destroy($id)
     {
-        $this->authorize('Administrateur','Professeur');
+        $this->authorize('Control');
+        //$this->authorize('Professeur');
         $cours = Cour::find($id);
         if($cours)
             $cours->delete();

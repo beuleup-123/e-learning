@@ -21,7 +21,10 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/bootstrap.min.js', 'public/js')
     .js('resources/js/bootstrap.bundle.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .styles(['resources/css/bootstrap.min.css','resources/css/blog-home.css','resources/css/bootstrap.css','resources/css/bootstrap-grid.css'], 'public/css/all.css');
+    .styles(['resources/css/blog-home.css',
+            'resources/css/bootstrap.css','resources/css/bootstrap.min.css',
+            'resources/css/bootstrap-grid.css', 'resources/css/bootstrap-grid.min.css',
+            'resources/css/bootstrap-reboot.css','resources/css/bootstrap-reboot.min.css'], 'public/css/all.css');
 mix.copyDirectory('node_modules/tinymce/plugins', 'public/node_modules/tinymce/plugins');
 mix.copyDirectory('node_modules/tinymce/skins', 'public/node_modules/tinymce/skins');
 mix.copyDirectory('node_modules/tinymce/themes', 'public/node_modules/tinymce/themes');

@@ -21,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
         Gate::define('Etudiant', function(User $user){
             return $user->isUser();
         });
+        Gate::define('Control', function(User $user){
+            return $user->isAdmin() || $user->isModerator() ? true : false;
+        });
     }
     /**
      * Bootstrap any application services.
