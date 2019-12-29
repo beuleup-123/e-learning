@@ -14,12 +14,12 @@ class CoursController extends Controller
       {
           $cour =\App\Cour::all();
           return view('accueils',compact('cour'));
-      }
+      }*/
     public function index()
     {
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         return view ("cours.index",compact('cours'));
-    }*/
+    }
     public function create()
     {
         //$this->authorize('Administrateur');

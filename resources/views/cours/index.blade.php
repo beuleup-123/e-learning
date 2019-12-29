@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts._navbar')
 @section('content')
-    <div class="container">
+    <div class="col-md-9">
         @if(session('success'))
             <div class="alert alert-success">{{session('success')}}</div>
         @endif

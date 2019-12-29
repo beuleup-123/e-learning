@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("layouts._navbar")
 @section("content")
     <div>
         <form action="{{route('category_store')}}" method="post">

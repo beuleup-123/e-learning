@@ -17,18 +17,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{route('home')}}">Accueil
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('formation')}}" >Formations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html" src="contact.html">Contact</a>
-                    </li>
-                    <p class="nav-link">{{_('|')}}</p>
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Connecter') }}</a>
@@ -55,43 +43,63 @@
                             </div>
                         </li>
                     @endguest
-                    <li class="nav-item">
-                        @can('Control')
-                            <a class="dropdown-item btn btn-dark btn-lg active" href="{{route('backoffice')}}" role="button" aria-pressed="true">Back Office</a>
-                        @endcan
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 </div>
-<!-- Header -->
-<header class=" py-3 mb-3 bg-dark">
-    <div class=" container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="text col-lg-7">
-                <h1 class="display-4  mt-5 mb-2 text-white">Cours en ligne</h1>
-                <!--p class="lead mb-6 ">ce site vous offre des cours en developpement comme le JavaScript,html.</p-->
-            </div>
-            <div class="col-5">
-                <img src="{{asset('images/IMG_2972.JPG')}}" class="d-block w-100" alt="...">
-            </div>
-        </div>
-    </div>
-</header>
-
 <div class="container">
-      @yield("content")
-</div>
-<!-- /.container -->
-
-
-<footer class="bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; E-learning 2019</p>
+    <div class="row">
+        <ul class="col-md-3 sidebar navbar-nav bg-dark">
+            <li class="nav-item active">
+                <a class="nav-link" href="/backoffice">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Tableau de bord</span>
+                </a>
+            </li>
+            {{--<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Login Screens:</h6>
+                    <a class="dropdown-item" href="login.html">Login</a>
+                    <a class="dropdown-item" href="register.html">Register</a>
+                    <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header">Other Pages:</h6>
+                    <a class="dropdown-item" href="404.html">404 Page</a>
+                    <a class="dropdown-item" href="blank.html">Blank Page</a>
+                </div>
+            </li>--}}
+            <li class="nav-item">
+                <a class="nav-link" href="/cours">
+                    <i class="fas fa-fw fa-bullhorn"></i>
+                    <span>Cours</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Categories</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/profs">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Professeurs</span></a>
+            </li>
+        </ul>
+         @yield("content")
     </div>
-    <!-- /.container -->
-</footer>
+</div>
+<div class="container" style="width:100%">
+    <footer class="bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; E-learning 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+</div>
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/jquery.slim.min.js')}}"></script>
