@@ -1,7 +1,7 @@
 @extends("layouts._navbar")
 @section("content")
 
-    <div>
+    <div class="col-md-9 container">
         @if($errors->any())
             @foreach($errors->all() as $error)
                 <div class="alert alert-danger">{{$error}}</div>
@@ -10,13 +10,13 @@
         <form action="{{route('cour_store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div>
-                <input type="text" name="nom" class="form-control" placeholder="nom cours">
+                <input type="text" name="nom" class="col-md-12 container form-control" placeholder="nom cours">
             </div>
             <div>
-                <input type="text" name="type" class="form-control" placeholder="type cours">
+                <input type="text" name="type" class="col-md-12 container form-control" placeholder="type cours">
             </div>
             <div>
-                <select name="category_id" id="category_id" class="form-control">
+                <select name="category_id" id="category_id" class="col-md-12 container form-control">
                     @foreach($categories as $key => $value)
                         <option value="{{$key}}">{{$value}}</option>
                     @endforeach
@@ -24,7 +24,7 @@
             </div>
 
             <div>
-                <textarea name="description" id="description" cols="30" rows="10" class="text form-control" placeholder="La description"></textarea>
+                <textarea name="description" id="description" cols="30" rows="10" class="text col-md-12 container form-control" placeholder="La description"></textarea>
             </div>
             <div>
                 <input type="file" name="cour_fichier">

@@ -35,10 +35,14 @@ Route::get('/categories/{id}/edit','CategoriesController@edit')->name('category_
 Route::patch('/categories/{id}/edit','CategoriesController@update')->name('category_update');
 Route::get('/categories/{id}/destroy','CategoriesController@destroy')->name('category_delete');
 
-Route::get('/profs','UsersController@index')->name('prof');
-Route::get('/user/{id}/edit','UsersController@edit')->name('user_edit');
-Route::get('/user/{id}/destroy','UsersController@destroy')->name('user_delete')->middleware('auth');
-Route::patch('/user/{id}/edit','UsersController@update')->name('user_update');
+Route::get('/prof/backoffice', 'ProfsController@backoffice')->name('prof_backoffice');
+Route::get('/profs','ProfsController@index')->name('prof_index');
+Route::get('/prof/create','ProfsController@create')->name('prof_create');
+Route::post('/prof/store','ProfsController@store')->name('prof_store');
+Route::get('/prof/{id}/edit','ProfsController@edit')->name('prof_edit');
+Route::get('/prof/{id}/destroy','ProfsController@destroy')->name('prof_delete')->middleware('auth');
+Route::patch('/prof/{id}/edit','ProfsController@update')->name('prof_update');
+
 Route::get('/projet/formation','HomeController@format')->name('formation')->middleware('auth');
 //Route::get('/projet/formation','HomeController@cours')->name('formation')->middleware('auth');
 Route::get("/projet/formation/{slug}/show", 'HomeController@show')->name('show')->middleware('auth');
@@ -50,6 +54,8 @@ Route::get('/projet/layout','HomeController@layouts')->name('layout');
 Auth::routes();
 Route::get('/','HomeController@index')->name('home');
 Route::get('/backoffice', 'BackofficeController@backoffice')->name('backoffice');
+Route::get('/admin/backoffice', 'BackofficeController@backoffice');
+
 Route::get('/home','HomeController@index')->name('home');
 Route::get('/projet/formation/cours/create','CommentController@create')->name('comment_create')->middleware('auth');
 Route::post('/projet/formation/cours/store','CommentController@store')->name('comment_store');

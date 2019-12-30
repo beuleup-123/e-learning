@@ -4,8 +4,8 @@
         @if(session('success'))
             <div class="alert alert-success">{{session('success')}}</div>
         @endif
-        <div>
-         {{--   <a href="{{route('user_store')}}" class="btn btn-primary">Ajouter des Cours</a>--}}
+        <div class="col-lg-4">
+          <a href="{{route('prof_create')}}" class="btn btn-primary">Ajouter un Professeur</a>
         </div>
         <table class="table table-striped">
             <tr>
@@ -23,10 +23,10 @@
                     <td>{{$user->email}}</td>
                     <!-- <td><a href="" class="byn btn-primary">Editer</a></td> -->
                     <td>
-                        <p class="btn btn-warning"> <a href ="{{route('user_edit',['id'=>$user->id])}}" >Editer</a> </p>
+                        <p class="btn btn-warning"> <a href ="{{route('prof_edit',['id'=>$user->id])}}" >Editer</a> </p>
                     </td>
                     <td>
-                        <p class="btn btn-danger"> <a href ="{{route('user_delete',['id'=>$user->id])}}" >Suprimer</a> </p>
+                        <p class="btn btn-danger"> <a href ="{{route('prof_delete',['id'=>$user->id])}}" >Suprimer</a> </p>
                     </td>
                 </tr>
             @endforeach

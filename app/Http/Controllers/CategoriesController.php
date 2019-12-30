@@ -6,6 +6,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
+        $this->authorize('Administrateur');
         $categories = category::orderBy('created_at', 'DESC')->get();
         return view ("category.index",compact('categories'));
     }

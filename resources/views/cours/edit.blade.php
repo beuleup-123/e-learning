@@ -1,6 +1,6 @@
 @extends("layouts._navbar")
 @section("content")
-    <div>
+    <div class="col-md-9 container">
         @if($errors->any())
             @foreach($errors->all() as $error)
                 <div class="alert alert-danger">{{$error}}</div>
@@ -11,26 +11,26 @@
             @method('patch')
 
             <div>
-                <input type="text" name="nom" class="form-control" placeholder="nom cours" value="{{$cours->nom}}">
+                <input type="text" name="nom" class="col-md-12 container form-control" placeholder="nom cours" value="{{$cours->nom}}">
             </div>
             <div>
-                <input type="text" name="type" class="form-control" placeholder="type cours" value="{{$cours->type}}">
+                <input type="text" name="type" class="col-md-12 container form-control" placeholder="type cours" value="{{$cours->type}}">
             </div>
             <div>
-                <select name="category_id" id="category_id" class="form-control">
+                <select name="category_id" id="category_id" class="col-md-12 container form-control">
                     @foreach($categories as $key => $value)
                         <option value="{{$key}}">{{$value}}</option>
                     @endforeach
                 </select>
             </div>
             <div>
-                <textarea name="description" id="description" cols="30" rows="10" class="text form-control" ><p>{{$cours->description}}</p> </textarea>
+                <textarea name="description" id="description" cols="30" rows="10" class="text col-md-12 container form-control" ><p>{{$cours->description}}</p> </textarea>
                 <div>
                     <input type="file" name="cour_fichier">
                 </div>
                 <div class="row">
                     <div class="col-md-10">
-                        <a href="{{route('backoffice')}}" class="btn btn-secondary">Annuler</a>
+                        <a href="{{route('cour_index')}}" class="btn btn-secondary">Annuler</a>
                     </div>
                     <div class="col-md-2 lg-2">
                         <button class="btn btn-primary">Enregistrer</button>

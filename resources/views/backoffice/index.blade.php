@@ -1,6 +1,6 @@
 @extends("layouts._navbar")
 @section("content")
-        <div id="col-md-9 content-wrapper">
+        <div id="col-md-9 ">
             <div class="container-fluid">
                 <!-- Breadcrumbs-->
                 <ol class="breadcrumb">
@@ -34,7 +34,7 @@
                                 <div class="mr-5">{{$categories_count}} Categories</div>
                             </div>
                             <a class="card-footer text-white clearfix small z-1" href="/categories">
-                                <span class="float-left">View Details</span>
+                                <span class="float-left">Liste des categories</span>
                                 <span class="float-right"><i class="fas fa-angle-right"></i></span>
                             </a>
                         </div>
@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="mr-5">{{$profs_count}} Professeurs</div>
                             </div>
-                            <a class="card-footer text-white clearfix small z-1" href="/prof">
+                            <a class="card-footer text-white clearfix small z-1" href="/profs">
                                 <span class="float-left">Liste des professeurs</span>
                                 <span class="float-right"><i class="fas fa-angle-right"></i></span>
                             </a>

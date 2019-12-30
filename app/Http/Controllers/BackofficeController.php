@@ -11,12 +11,13 @@ class                                                                           
 {
     public  function  backoffice()
     {
+        $this->authorize('Administrateur');
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         $profs = User::orderBy('created_at', 'DESC')->where('status','Professeur')->get();
         $categories = category::orderBy('created_at', 'DESC')->get();
         $cours_count = Cour::all()->count();
         $categories_count = Category::all()->count();
-        $profs_count = User::all()->where('status','Prefesseur')->count();
+        $profs_count = User::all()->where('status','Professeur')->count();
         return view ("backoffice.index",compact('cours','profs_count',
             'categories_count','cours_count','profs','categories'));
     }

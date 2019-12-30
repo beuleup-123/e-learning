@@ -52,54 +52,61 @@
     <div class="row">
         <ul class="col-md-3 sidebar navbar-nav bg-dark">
             <li class="nav-item active">
-                <a class="nav-link" href="/backoffice">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Tableau de bord</span>
                 </a>
             </li>
-            {{--<li class="nav-item dropdown">
+            <li class="nav-item dropdown">
+                @can('Administrateur')
                 <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
                 </a>
+                @endcan
                 <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                     <h6 class="dropdown-header">Login Screens:</h6>
-                    <a class="dropdown-item" href="login.html">Login</a>
-                    <a class="dropdown-item" href="register.html">Register</a>
-                    <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+                    <a class="dropdown-item" href="/login">Login</a>
+                    <a class="dropdown-item" href="/register">Register</a>
+                    <a class="dropdown-item" href="/forgot-password">Forgot Password</a>
                     <div class="dropdown-divider"></div>
                     <h6 class="dropdown-header">Other Pages:</h6>
-                    <a class="dropdown-item" href="404.html">404 Page</a>
-                    <a class="dropdown-item" href="blank.html">Blank Page</a>
+                    <a class="dropdown-item" href="/404">404 Page</a>
+                    <a class="dropdown-item" href="/blank">Blank Page</a>
                 </div>
-            </li>--}}
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/cours">
                     <i class="fas fa-fw fa-bullhorn"></i>
                     <span>Cours</span></a>
             </li>
             <li class="nav-item">
+            @can('Administrateur')
                 <a class="nav-link" href="/categories">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Categories</span></a>
+            @endcan        
             </li>
             <li class="nav-item">
+            @can('Administrateur')
                 <a class="nav-link" href="/profs">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Professeurs</span></a>
+             @endcan       
             </li>
         </ul>
+        <li class="nav-item">
+                    </li>
          @yield("content")
     </div>
 </div>
-<div class="container" style="width:100%">
-    <footer class="bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; E-learning 2019</p>
-        </div>
-        <!-- /.container -->
-    </footer>
-</div>
+<footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+ </footer>
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/jquery.slim.min.js')}}"></script>
@@ -110,7 +117,7 @@
 <script>
     tinymce.init({
         selector:'textarea.text',
-        width: 1110,
+       // width: 825,
         height: 300,
         branding: false,
         resize: false,

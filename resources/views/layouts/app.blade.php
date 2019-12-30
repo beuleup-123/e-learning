@@ -55,11 +55,6 @@
                             </div>
                         </li>
                     @endguest
-                    <li class="nav-item">
-                        @can('Control')
-                            <a class="dropdown-item btn btn-dark btn-lg active" href="{{route('backoffice')}}" role="button" aria-pressed="true">Back Office</a>
-                        @endcan
-                    </li>
                 </ul>
             </div>
         </div>
