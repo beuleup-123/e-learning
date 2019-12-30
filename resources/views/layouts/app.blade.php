@@ -86,7 +86,7 @@
 <!-- /.container -->
 
 
-<footer class="bg-dark">
+<footer class="bg-dark fixed-bottom">
     <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; E-learning 2019</p>
     </div>

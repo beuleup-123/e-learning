@@ -25,4 +25,12 @@ h4 #cour_nom{
     flex: 0 0 100%;
     max-width: 80%;
 }
+#catego{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-between;
+}
 

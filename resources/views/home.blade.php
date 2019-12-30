@@ -5,29 +5,27 @@
         <div class="row">
             <div class=" col-md-8 mb-5">
                 <h2 class="text-center text-dark">Nouveaux</h2>
-                <div class="row bd-example">
-                       @foreach($category as $category)
-                           <div class="col-lg-6 col-sm-4 portfolio-item">
-                               <div class="card h-100">
-                                   <h4 class="card-title">
-                                       {{$category->nom}}
-                                   </h4>
-                                   <a href="#"><img class="card-img-top" src="{{asset('images/imag1.jpg')?? $category->nom}}" height="250" width="250" alt=""></a>
-                                   <div class="card-body">
-                                       <table class="table table-borderless">
-                                           @foreach($cours as $cour)
-                                               @if($cour->category_id == $category->id)
-                                                   <tr>
-                                                        <td> <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br> </td>
-                                                         <td>{{$cour->updated_at}}</td>
-                                                   </tr>
-                                               @endif
-                                           @endforeach
-                                       </table>
-                                   </div>
-                               </div>
-                           </div>
-                       @endforeach
+                <div class="row bd-example" id="catego">
+                    <div class="col-lg-9 col-sm-4 portfolio-item">
+                        <div class="row card">
+                            <div class="h-100">
+                                <a href="#"><img class="card-img-top" src="{{asset('images/imag1.jpg')}}" height="250" width="250" alt=""></a>
+                            </div>
+                            <div class=" h-100">
+                                <p>Apprendre HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-sm-4 portfolio-item">
+                        <div class="row card">
+                            <div class="h-100">
+                                <a href="#"><img class="card-img-top" src="{{asset('images/imag1.jpg')}}" height="250" width="250" alt=""></a>
+                            </div>
+                            <div class=" h-100">
+                                <p>Apprendre HTML</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 mb-5">
