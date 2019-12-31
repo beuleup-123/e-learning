@@ -37049,7 +37049,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/roo/www/projet/e_learning/e-learning/resources/js/bootstrap.js */"./resources/js/bootstrap.js");
+module.exports = __webpack_require__(/*! /home/biramendao/www/e_learning/resources/js/bootstrap.js */"./resources/js/bootstrap.js");
 
 
 /***/ })

@@ -5,14 +5,30 @@
  */
 body {
   padding-top: 56px;
+  width: 100%;
+    height: 100%;
 }
-.container .row{
+.container{
+    width: 100%;
+    height: 100%;
+} 
+.row{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    align-items:stretch;
-    justify-content: stretch;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
 }
 #list{
+    width: 100%;
+    height: 100%;
     overflow: scroll;
     display: flex;
     flex-direction: row;
@@ -21,16 +37,33 @@ body {
     align-items: flex-start;
     align-content: stretch;
 }
-h4 #cour_nom{
+/*h4 #cour_nom{
     flex: 0 0 100%;
     max-width: 80%;
-}
-#catego{
+}*/
+.catego{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: stretch;
     align-content: space-between;
 }
+.col-{
+    width: 100%;
+    height: 100%;
+}
+.head{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: 90px;
+}
+.img{
+    width: 355px;
+    height: 100px;
+}
+
 

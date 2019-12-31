@@ -60,13 +60,13 @@
         </div>
     </nav>
 </div>
-<!-- Header -->
+<!-- Header 
 <header class=" py-3 mb-3 bg-dark">
     <div class=" container h-100">
         <div class="row h-100 align-items-center">
             <div class="text col-lg-7">
                 <h1 class="display-4  mt-5 mb-2 text-white">Cours en ligne</h1>
-                <!--p class="lead mb-6 ">ce site vous offre des cours en developpement comme le JavaScript,html.</p-->
+                p class="lead mb-6 ">ce site vous offre des cours en developpement comme le JavaScript,html.</p
             </div>
             <div class="col-5">
                 <img src="{{asset('images/IMG_2972.JPG')}}" class="d-block w-100" alt="...">
@@ -74,7 +74,7 @@
         </div>
     </div>
 </header>
-
+-->
 <div class="container">
       @yield("content")
 </div>

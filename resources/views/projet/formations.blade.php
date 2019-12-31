@@ -1,24 +1,20 @@
 @extends('layouts.app')
 @section('content')
-        <div class="row">
+        <div class="row content">
             <!-- Post Content Column -->
             <div class="col-lg-8">
                 <!-- Title -->
                 @foreach($index_cour as $cour)
-                    <div class="row">
+                    
                         <hr>
-                        <h4 id="cour_nom" class="col-md-4 ">{{$cour->nom}}</h4>
+                        <h3 id="cour_nom" class="col-md-4 ">{{$cour->nom}}</h3>
                         <!-- Date/Time -->
                         <p col-md-4>{{$cour->updated_at}}</p>
-                    </div>
-
                     <div class="card-body">
                         <p>{!! $cour->description !!}</p>
                     </div>
                     <hr>
-
                     <!-- Comments Form -->
-
                     <div class="card my-4">
                         <h5 class="card-header">Leave a Comment:</h5>
                         <div class="card-body">
