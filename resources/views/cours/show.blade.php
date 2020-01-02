@@ -3,7 +3,7 @@
         <div class="row content">
 
             <!-- Post Content Column -->
-            <div class="col-lg-8">
+            <div class="col-lg-9">
 
                 <!-- Title -->
                 @foreach($index_cour as $cour)
@@ -51,7 +51,7 @@
             </div>
 
             <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-lg-3">
 
                 <!-- Search Widget -->
                 <div class="card my-4">

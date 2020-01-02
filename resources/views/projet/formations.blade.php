@@ -2,7 +2,7 @@
 @section('content')
         <div class="row content">
             <!-- Post Content Column -->
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <!-- Title -->
                 @foreach($index_cour as $cour)
                     
@@ -45,7 +45,7 @@
             </div>
 
             <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-lg-3">
 
                 <!-- Search Widget -->
                 <div class="card my-4">
@@ -63,8 +63,8 @@
                     <div class="row bd-example" id="list">
                         @foreach($category as $category)
                             <div class="col-lg-12 col-sm-4 portfolio-item">
-                                <div class="header h-100">
-                                    <h4 class="card-header">
+                                <div class="card-header h-100">
+                                    <h4 class="header text-center">
                                         {{$category->nom}}
                                     </h4>
                                     <div class="card-body">
