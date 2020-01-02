@@ -1,32 +1,26 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
-
-        <div class="row">
-
+        <div class="row content">
             <!-- Post Content Column -->
-            <div class="col-lg-8">
-
+            <div class="col-lg-9">
                 <!-- Title -->
                 @foreach($index_cour as $cour)
-                    <h1 class="mt-4">{{$cour->nom}}</h1>
-                    <hr>
-
-                    <!-- Date/Time -->
-                    <p>{{$cour->updated_at}}</p>
-                    <hr>
+                        <hr>
+                        <h3 id="cour_nom" class="col-md-4 ">{{$cour->nom}}</h3>
+                        <!-- Date/Time -->
+                        <p col-md-4>{{$cour->updated_at}}</p>
                     <div class="card-body">
                         <p>{!! $cour->description !!}</p>
                     </div>
                     <hr>
-
                     <!-- Comments Form -->
-
                     <div class="card my-4">
                         <h5 class="card-header">Leave a Comment:</h5>
                         <div class="card-body">
                             <form action="{{route('comment_store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
+                                <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::id()}}">
+                                <input type="hidden" name="cour_id" value="{{$cour->id}}">
                                 <div class="form-group">
                                     <textarea class="form-control" name="description" rows="3"></textarea>
                                 </div>
@@ -34,25 +28,26 @@
                             </form>
                         </div>
                     </div>
-
                     <!-- Single Comment -->
-                    @foreach($comment as $commentaire)
+                    @foreach($cour->comments as $key)  
                         <div class="media mb-4">
-                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                            <img class="d-flex mr-3 rounded-circle" src=" http://placehold.it/50x50" alt="{{ Auth::user()->name }}">
                             <div class="media-body">
-                                <p> {{$commentaire->description}}</p>
+                            
+                              <p> {{$key->description}}</p> 
                             </div>
+                            
                         </div>
                     @endforeach
                 @endforeach
-                <div>
-                    {{-- <nav aria-label="..."> {{ $index_cour->appends(['sort' => 'votes'])->links()}}</nav>--}}
-                </div>
+                {{--  <div>
+                     <nav aria-label="..."> {{ $index_cour->appends(['sort' => 'votes'])->links()}}</nav>
+                </div>--}}
                 <!-- Comment with nested comments -->
             </div>
 
             <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-lg-3">
 
                 <!-- Search Widget -->
                 <div class="card my-4">
@@ -60,50 +55,33 @@
                     <div class="card-body">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
+                            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Go!</button></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Categories Widget -->
                 <div class="card my-4">
-                    <div class="row bd-example">
-                        @foreach($category as $category)
-                            <div class="col-lg-6 col-sm-4 portfolio-item">
-                                <div class="card h-100">
-                                    <h4 class="card-header">
+                    <div class="row bd-example" id="list">
+                       @foreach($category as $category)
+                            <div class="col-lg-12 col-sm-4 portfolio-item">
+                                <div class="card-header h-100">
+                                    <h4 class="header text-center">
                                         {{$category->nom}}
                                     </h4>
                                     <div class="card-body">
-                                        <table class="table table-borderless">
                                             @foreach($cours as $cour)
-                                                <tr>
-                                                    <td></td>
-                                                    <td> <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br> </td>
-                                                    <td>{{$cour->updated_at}}</td>
-                                                </tr>
+                                                @if($cour->category_id == $category->id )
+                                                     <a href="{{route('show',['slug'=>$cour->slug])}}">{{$cour->nom}}</a><br>
+                                                @endif
                                             @endforeach
-                                        </table>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
                     </div>
                 </div>
-                <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Side Widget</h5>
-                    <div class="card-body">
-                        You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-                    </div>
-                </div>
-
             </div>
-
         </div>
         <!-- /.row -->
-
-    </div>
 @endsection

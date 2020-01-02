@@ -15,7 +15,6 @@
 Route::get('/projet',function(){
     return view('projet.formation');
 });*/
-Route::get("/produits/{id}","ProductsController@show");
 Route::get('/cours', 'CoursController@index')->name('cour_index');
 Route::get('/cours/create','CoursController@create')->name('cour_create')->middleware('auth');
 Route::post('/cours/store','CoursController@store')->name('cour_store');

@@ -24,7 +24,7 @@
 <body id="page-top" style="padding: 0">
 @include('layouts._navbar'){{--le men est inclus apartir du fichier _navbarre.blade.php--}}
 <div id="wrapper">
-    {{-- les side barre n'est visible que si le user est connecte--}}
+    {{-- les side barre n'est visibleRoute::get("/produits/{id}","ProductsController@show"); que si le user est connecte--}}
     @auth
         @include('layouts._adminSidebar'){{-- le side barre est inclus a partir du fichier _adminSidebarre.blade.php --}}
     @endauth

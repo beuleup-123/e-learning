@@ -43,6 +43,7 @@ class HomeController extends Controller
         $comment = Comment::orderBy('created_at', 'DESC')->get();
         $index_cour = Cour::orderBy('created_at', 'DESC')->paginate(1);
         $category = category::orderBy('created_at', 'DESC')->get();
+        //dd($comment);
         return view('projet.formations',compact('cours','index_cour','comment','autre_cour','category'));
        // return view('projet.formation', ['cours' => $cours]);
     }
@@ -70,9 +71,10 @@ class HomeController extends Controller
         $comment = Comment::orderBy('created_at', 'DESC')->get();
         //$index_slug = Cour::where('slug',$slug)->first();
         $index_cour = Cour::where('slug',$slug)->paginate(1);
+       
         $category = category::orderBy('created_at', 'DESC')->get();
-        //dd($index_cour);
-        return view("cours.show", compact('index_cour','cours','comment','autre_cour','category'));
+        
+        return view("layouts.cours", compact('index_cour','cours','comment','autre_cour','category'));
     }
 
 }

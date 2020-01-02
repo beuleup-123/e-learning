@@ -26,7 +26,9 @@ class CommentController extends Controller
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         $comment = new Comment();
         $comment->description = $request->input('description');
+        $comment->cour_id = $request->input('cour_id');
+        $comment->user_id = $request->input('user_id');
         $comment->save();
-        return redirect()->route('formation');
+        return redirect()->back();
     }
 }
