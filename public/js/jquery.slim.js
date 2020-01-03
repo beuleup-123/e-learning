@@ -7568,7 +7568,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/biramendao/www/e_learning/resources/jquery/jquery.slim.js */"./resources/jquery/jquery.slim.js");
+module.exports = __webpack_require__(/*! /home/roo/www/projet/e_learning/e-learning/resources/jquery/jquery.slim.js */"./resources/jquery/jquery.slim.js");
 
 
 /***/ })

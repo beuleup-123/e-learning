@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\category;
 use App\Cour;
 use App\User;
+use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
@@ -113,9 +114,41 @@ class CoursController extends Controller
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
         return $file;
     }
-    public function show($id){
-        $category = category::find($id);
-        return view("projet.formation", compact('category'));
+    public function html(){
+        $autre_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','1')->get();
+        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id','1')->get();
+        $comment = Comment::orderBy('created_at', 'DESC')->get();
+        $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','1')->paginate(1);
+        $category = category::orderBy('created_at', 'DESC')->where('id','')->get();
+        //dd($comment);
+        return view('layouts.page_cat',compact('cours','index_cour','comment','autre_cour','category'));
     }
-
+    public function css(){
+        $autre_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','3')->get();
+        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id','3')->get();
+        $comment = Comment::orderBy('created_at', 'DESC')->get();
+        $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','3')->paginate(1);
+        $category = category::orderBy('created_at', 'DESC')->where('id','3')->get();
+        //dd($comment);
+        return view('layouts.page_cat',compact('cours','index_cour','comment','autre_cour','category'));
+    }
+    public function php(){
+        $autre_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','2')->get();
+        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id','2')->get();
+        $comment = Comment::orderBy('created_at', 'DESC')->get();
+        $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','2')->paginate(1);
+        $category = category::orderBy('created_at', 'DESC')->where('id','2')->get();
+        //dd($comment);
+        return view('layouts.page_cat',compact('cours','index_cour','comment','autre_cour','category'));
+    }
+    public function java(){
+        $autre_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','4')->get();
+        $cours = Cour::orderBy('created_at', 'DESC')->where('category_id','4')->get();
+        $comment = Comment::orderBy('created_at', 'DESC')->get();
+        $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','4')->paginate(1);
+        $category = category::orderBy('created_at', 'DESC')->where('id','4')->get();
+        //dd($comment);
+        return view('layouts.page_cat',compact('cours','index_cour','comment','autre_cour','category'));
+    }
+    
 }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-        <div class="row content">
+        <div class="row content contenu_formation">
             <!-- Search Widget -->
             <div class="col-lg-11  position-center search">
                  <div class="card-body">
