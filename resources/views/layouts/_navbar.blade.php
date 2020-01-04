@@ -5,6 +5,10 @@
     <title>HOMEdu</title>
     <link href="{{asset('css/app.css')}}" rel="stylesheet" />
     <link href="{{asset('css/all.css')}}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
 <!-- Navigation -->
@@ -29,7 +33,7 @@
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                            <i class="fa fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -48,8 +52,8 @@
         </div>
     </nav>
 </div>
-<div class="container">
-    <div class="row">
+<div class="container ">
+    <div class="row content head body-office">
         <ul class="col-md-3 sidebar navbar-nav bg-dark">
             <li class="nav-item active">
                 <a class="nav-link" href="#">
@@ -77,7 +81,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/cours">
-                    <i class="fas fa-fw fa-bullhorn"></i>
+                    <i class="fas fa fa-book"></i>
                     <span>Cours</span></a>
             </li>
             <li class="nav-item">
@@ -95,18 +99,19 @@
              @endcan       
             </li>
         </ul>
-        <li class="nav-item">
-                    </li>
-         @yield("content")
-    </div>
-</div>
-<footer class="sticky-footer">
+        <div class="col-md-9 body-office">
+             @yield("content") 
+         </div>
+         <footer class=" col-md-12 sticky-footer head">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
                     <span>Copyright © Your Website 2019</span>
                 </div>
-            </div>
- </footer>
+             </div>
+         </footer>
+    </div>   
+</div>
+
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/jquery.slim.min.js')}}"></script>

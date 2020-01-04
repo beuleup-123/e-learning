@@ -58,5 +58,6 @@ Route::get('/admin/backoffice', 'BackofficeController@backoffice');
 Route::get('/home','HomeController@index')->name('home');
 Route::get('/projet/formation/cours/create','CommentController@create')->name('comment_create')->middleware('auth');
 Route::post('/projet/formation/cours/store','CommentController@store')->name('comment_store');
+Route::get('/comment/{id}/destroy','CommentController@destroy')->name('comment_delete');
 
 

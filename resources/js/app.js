@@ -31,3 +31,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+require('@fortawesome/fontawesome-free/scss/brands.scss');
+require('@fortawesome/fontawesome-free/scss/fontawesome.scss');
+require('@fortawesome/fontawesome-free/scss/regular.scss');
+require('@fortawesome/fontawesome-free/scss/solid.scss');

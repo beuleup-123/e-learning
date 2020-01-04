@@ -11,10 +11,9 @@
                  </div>
             </div>
         <!-- Sidebar Widgets Column -->
-            <div class="list_cat col-lg-3  position-center">
+            <div class="list_cat col-lg-3 fixed-left">
                 <!-- Categories Widget -->
-                <div>
-                    <div class="card my-4 row bd-example fixed-left" id="list">
+                <div class="card my-4 row bd-example fixed-left">
                        @foreach($category as $category)
                             <div class="col-lg-12 col-sm-4 portfolio-item">
                                 <div class="h-100">
@@ -31,7 +30,6 @@
                                 </div>
                             </div>
                         @endforeach
-                    </div>
                 </div>
             </div>
             <!-- Post Content Column -->

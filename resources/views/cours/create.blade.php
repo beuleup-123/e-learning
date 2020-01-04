@@ -1,7 +1,7 @@
 @extends("layouts._navbar")
 @section("content")
 
-    <div class="col-md-9 container">
+    <div class="col-md-12 ">
         @if($errors->any())
             @foreach($errors->all() as $error)
                 <div class="alert alert-danger">{{$error}}</div>

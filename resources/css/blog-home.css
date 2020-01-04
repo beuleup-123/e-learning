@@ -27,7 +27,7 @@ body {
 	align-items: stretch;
     align-content: stretch;
     padding-left: 5px;
-    padding-left: 5px;
+    padding-right: 5px;
 }
 #list{
     width: 100%;
@@ -76,7 +76,8 @@ body {
 .list_cat{
     width: 100%;
     padding-left: 35px;
-    position: center;
+    position: fixed;
+
 }
 .titre{
     display: flex;
@@ -98,10 +99,9 @@ body {
     padding-left: 25px;
     padding-right: 20px;
 }
-.contenu_formation{
+.body-office{
     width: 100%;
-    padding-left: 25px;
-    padding-right: 20px;
+    height: 560px;
 }
 
 

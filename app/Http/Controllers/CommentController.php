@@ -31,4 +31,13 @@ class CommentController extends Controller
         $comment->save();
         return redirect()->back();
     }
+    public function destroy($id)
+    {
+        $this->authorize('Control');
+        //$this->authorize('Professeur');
+        $comment = Cour::find($id);
+        if($comment)
+            $comment->delete();
+        return redirect()->back()->with(['success' => "Vos donnees ont ete suprimees"]);
+    }
 }
