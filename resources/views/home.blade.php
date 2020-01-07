@@ -2,14 +2,14 @@
 @section("content")
 
     <!-- Page Content -->
-        <div class="row content">
-            <div class=" col-md-9 mb-5 py-3">
-                <h2 class="text-center text-dark">Nouveaux</h2>
+        <div class="row content ">
+            <div class=" col-md-9 mb-5 py-3 greyitem">
+                <h2 class="text-center text-dark">Nos formations</h2>
                 <div class="row catego ">
                     <div class="col-lg-12 col-sm-4 portfolio-item">
                         <div class="row content border">
                             <div class="col-6 h-100">
-                                <a href="{{route('html')}}"><img class="card-img-top" src="{{asset('images/code_html.jpeg')}}" height="250" width="250" alt=""></a>
+                                <a href="{{route('html')}}"><img class="card-img-top" src="{{asset('images/code_html1.jpeg')}}" height="250" width="250" alt=""></a>
                             </div>
                             <div class="col-6 h-100">
                                 <h5 class="text-center text-dark ">Bloc HTML</h5>
@@ -29,7 +29,7 @@
                     <div class="col-lg-12 col-sm-4 portfolio-item">
                         <div class="row content border">
                             <div class="col-6 h-100">
-                                <a href="{{route('css')}}"><img class="card-img-top" src="{{asset('images/csszengarden2_csscode.png')}}" height="250" width="250" alt=""></a>
+                                <a href="{{route('css')}}"><img class="card-img-top" src="{{asset('images/css_code.png')}}" height="250" width="250" alt=""></a>
                             </div>
                             <div class="col-6 h-100">
                                 <h5 class="text-center text-dark">Bloc CSS</h5>
@@ -61,14 +61,14 @@
                                     </div>
                             </div>
                             <div class="col-6 h-100">
-                                <a href="{{route('php')}}"><img class="card-img-top" src="{{asset('images/phpdesigner-intelligentsyntax.png')}}" height="250" width="250" alt=""></a>
+                                <a href="{{route('php')}}"><img class="card-img-top" src="{{asset('images/phpdesigner.png')}}" height="250" width="250" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12 col-sm-4 portfolio-item">
                         <div class="row content border">
                             <div class="col-6 h-100">
-                                <a href="{{route('java')}}"><img class="card-img-top" src="{{asset('images/Source_code_in_Javascript.png')}}" height="250" width="250" alt=""></a>
+                                <a href="{{route('java')}}"><img class="card-img-top" src="{{asset('images/code_Javascript.png')}}" height="250" width="250" alt=""></a>
                             </div>
                             <div class="col-6 h-100">
                                 <h5 class="text-center text-dark ">Bloc Java script</h5>
