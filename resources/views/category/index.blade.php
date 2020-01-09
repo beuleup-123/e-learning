@@ -1,7 +1,8 @@
 @extends('layouts._navbar')
 @section('content')
 
-    <div class="col-md-9 container">
+<div id="wrapper">
+    <div id="content-wrapper">
         <div>
             <a href="{{route('category_create')}}" class="btn btn-primary">Ajouter des Cours</a>
         </div>
@@ -26,4 +27,5 @@
             @endforeach
         </table>
     </div>
+</div>
 @endsection

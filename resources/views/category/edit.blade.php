@@ -1,6 +1,7 @@
 @extends("layouts._navbar")
 @section("content")
-    <div class="col-md-9 container">
+<div id="wrapper">
+    <div id="content-wrapper">
         <form action="{{route('category_update',['id'=>$categories->id])}}" method="post">
             @csrf
             @method('patch')
@@ -17,4 +18,5 @@
             </div>
         </form>
     </div>
+</div>
 @endsection

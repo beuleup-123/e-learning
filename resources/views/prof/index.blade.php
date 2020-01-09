@@ -1,6 +1,7 @@
 @extends('layouts._navbar')
 @section('content')
-    <div class="col-md-9     container">
+<div id="wrapper">
+    <div id="content-wrapper">
         @if(session('success'))
             <div class="alert alert-success">{{session('success')}}</div>
         @endif
@@ -32,4 +33,5 @@
             @endforeach
         </table>
     </div>
+</div>
 @endsection

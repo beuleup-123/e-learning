@@ -1,6 +1,7 @@
 @extends("layouts._navbar")
 @section("content")
-    <div class="col-md-9 container">
+<div id="wrapper">
+    <div id="content-wrapper">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
@@ -82,4 +83,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection

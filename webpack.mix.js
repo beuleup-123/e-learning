@@ -10,7 +10,6 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/jquery/jquery.min.js', 'public/js')
     .js('resources/jquery/jquery.js', 'public/js')
@@ -23,8 +22,10 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .styles(['resources/css/blog-home.css',
             'resources/css/bootstrap.css','resources/css/bootstrap.min.css',
-            'resources/css/bootstrap-grid.css', 'resources/css/bootstrap-grid.min.css',
-            'resources/css/bootstrap-reboot.css','resources/css/bootstrap-reboot.min.css'], 'public/css/all.css');
+            'resources/css/bootstrap-grid.css','resources/css/bootstrap-grid.min.css',
+            'resources/css/bootstrap-reboot.css','resources/css/bootstrap-reboot.min.css',
+            'resources/css/sb-admin.css'], 'public/css/all.css')
+    .styles(['resources/css/fontawesome-free/css/all.min.css'],'public/css/fontawesome.css');
 mix.copyDirectory('node_modules/tinymce/plugins', 'public/node_modules/tinymce/plugins');
 mix.copyDirectory('node_modules/tinymce/skins', 'public/node_modules/tinymce/skins');
 mix.copyDirectory('node_modules/tinymce/themes', 'public/node_modules/tinymce/themes');

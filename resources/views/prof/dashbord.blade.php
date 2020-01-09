@@ -1,6 +1,7 @@
 @extends("layouts._navbar")
 @section("content")
-        <div id="col-md-9 content-wrapper">
+<div id="wrapper">
+    <div id="content-wrapper">
             <div class="container-fluid">
                 <!-- Breadcrumbs-->
                 <ol class="breadcrumb">
@@ -28,6 +29,7 @@
                 </div>
             </div>
         </div>
+</div>
 @endsection
 
 

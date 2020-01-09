@@ -11,7 +11,7 @@ class ProfsController extends Controller
 {
     public function index()
     {
-        $this->authorize('Administrateur');
+      //  $this->authorize('Administrateur');
         $profs = User::orderBy('created_at', 'DESC')->where('status','Professeur')->get();
         return view("prof.index", compact('profs'));
     }
@@ -38,7 +38,7 @@ class ProfsController extends Controller
 
    public function edit($id)
    {
-       $this->authorize('Administrateur');
+       //$this->authorize('Administrateur');
        $profs = \App\User::find($id);//on recupere le user
        return view('prof.edit', compact('profs'));
    }

@@ -17,9 +17,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{route('home')}}">Accueil
-                                <span class="sr-only">(current)</span>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('home')}}"><i class="fa fa-home"></i>Accueil 
                             </a>
                         </li>
                         <li class="nav-item">
@@ -41,13 +40,14 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                <i class="fa fa-user-circle"></i>  
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                     <span class="caret"><i class="fa fa-user">{{ Auth::user()->name }}</i></span>
+                                    <a class="dropdown-item" href="#"
                                     onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                        {{ __('Deconnecter') }}
+                                    document.getElementById('logout-form').submit();">
+                                      <p> <i class="fa fa-unlock">{{ __('Deconnecter') }}</i></p> 
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -75,7 +75,7 @@
         </div>
     </header>
     -->
-    <div class="contenu">
+    <div class="container">
         @yield("content")
     </div>
 <!-- /.container -->
