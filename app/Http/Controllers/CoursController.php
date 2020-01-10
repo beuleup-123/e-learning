@@ -120,7 +120,7 @@ class CoursController extends Controller
         $cours = Cour::orderBy('created_at', 'DESC')->where('category_id','1')->get();
         $comment = Comment::orderBy('created_at', 'DESC')->get();
         $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','1')->paginate(1);
-        $category = category::orderBy('created_at', 'DESC')->where('id','')->get();
+        $category = category::orderBy('created_at', 'DESC')->where('id','1')->get();
         //dd($comment);
         return view('layouts.cours',compact('cours','index_cour','comment','autre_cour','category'));
     }

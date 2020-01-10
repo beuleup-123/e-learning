@@ -5,6 +5,9 @@
     <title>HOMEdu</title>
     <link href="{{asset('css/app.css')}}" rel="stylesheet" />
     <link href="{{asset('css/all.css')}}" rel="stylesheet" />
+    <link href="{{asset('css/fontawesome.css')}}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&display=swap"
+      rel="stylesheet">
 </head>
 <body>
 <!-- Navigation -->
@@ -18,8 +21,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('home')}}"><i class="fa fa-home"></i>Accueil 
-                            </a>
+                            <a class="nav-link" href="{{route('home')}}"><i class="fa fa-home"></i>Accueil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('formation')}}" >Formations</a>
@@ -72,6 +74,9 @@
                
             </div>
         </nav>
+        <div>
+         @yield('categ')
+        </div>
     </div>
     <!-- Header 
     <header class=" py-3 mb-3 bg-dark">
@@ -88,7 +93,7 @@
         </div>
     </header>
     -->
-    <div class="contenu">
+    <div >
         @yield("content")
     </div>
 <!-- /.container -->

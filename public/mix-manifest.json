@@ -11,6 +11,7 @@
     "/js/jquery.slim.min.js": "/js/jquery.slim.min.js",
     "/css/all.css": "/css/all.css",
     "/css/fontawesome.css": "/css/fontawesome.css",
+    "/css/sb-admin.css": "/css/sb-admin.css",
     "/node_modules/tinymce/jquery.tinymce.js": "/node_modules/tinymce/jquery.tinymce.js",
     "/node_modules/tinymce/jquery.tinymce.min.js": "/node_modules/tinymce/jquery.tinymce.min.js",
     "/node_modules/tinymce/tinymce.js": "/node_modules/tinymce/tinymce.js",
