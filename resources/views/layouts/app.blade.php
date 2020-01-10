@@ -38,25 +38,38 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class="fa fa-user-circle"></i>  
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                     <span class="caret"><i class="fa fa-user">{{ Auth::user()->name }}</i></span>
-                                    <a class="dropdown-item" href="#"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                      <p> <i class="fa fa-unlock">{{ __('Deconnecter') }}</i></p> 
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+                        <li class="nav-item">
+                              <!-- Navbar Search -->
+                            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
                                 </div>
-                            </li>
+                            </div>
+                            </form>
+                        </li>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">{{ Auth::user()->name }}</a>
+                            @can('Administrateur')
+                              <a class="dropdown-item" href="/admin/backoffice">
+                                  <i class="fas fa-bars"></i>
+                              <span>back-office</span></a>
+                             @endcan
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ route('logout') }}" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                            </div>
+                        </li>
                         @endguest
                     </ul>
                 </div>
+               
             </div>
         </nav>
     </div>
@@ -75,7 +88,7 @@
         </div>
     </header>
     -->
-    <div class="container">
+    <div class="contenu">
         @yield("content")
     </div>
 <!-- /.container -->

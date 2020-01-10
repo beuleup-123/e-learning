@@ -1,17 +1,8 @@
 @extends('layouts.app')
 @section('content')
-        <div class="row content contenu_formation">
-            <!-- Search Widget -->
-            <div class="col-lg-11  position-center search">
-                 <div class="card-body">
-                     <div class="input-group">
-                       <input type="text" class="form-control" placeholder="Search for...">
-                          <span class="input-group-btn"><button class="btn btn-secondary" type="button">Go!</button></span>
-                        </div>
-                 </div>
-            </div>
+        <div class="row ">
         <!-- Sidebar Widgets Column -->
-            <div class="list_cat col-lg-3  position-center">
+            <div class="list_cat col-lg-3 topitem position-center">
                 <!-- Categories Widget -->
                 <div>
                     <div class="card my-4 row bd-example fixed-left" id="list">
@@ -35,7 +26,7 @@
                 </div>
             </div>
             <!-- Post Content Column -->
-            <div class="col-lg-9">
+            <div class="col-lg-9 topitem">
                 <!-- Title -->
                 @foreach($index_cour as $cour)
                         <div class="titre">

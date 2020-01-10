@@ -47,18 +47,6 @@ class HomeController extends Controller
         return view('projet.formations',compact('cours','index_cour','comment','autre_cour','category'));
        // return view('projet.formation', ['cours' => $cours]);
     }
-    public  function  backoffice()
-    {
-        //Auth::logout();
-        $cours = Cour::orderBy('created_at', 'DESC')->get();
-        $prof = User::orderBy('created_at', 'DESC')->where('status','Professeur')->get();
-        $categories = category::orderBy('created_at', 'DESC')->get();
-        $cours_count = Cour::all()->count();
-        $categories_count = Category::all()->count();
-        $prof_count = User::all()->where('status','Prefesseur')->count();
-        return view ("backoffice.index",compact('cours','prof_count',
-            'categories_count','cours_count','prof','categories'));
-    }
    /* public function boot()
     {
         Paginator::defaultView('projet.formations');

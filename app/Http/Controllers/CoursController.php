@@ -18,12 +18,13 @@ class CoursController extends Controller
       }*/
     public function index()
     {
+        $this->authorize('Control');
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         return view ("cours.index",compact('cours'));
     }
     public function create()
     {
-        //$this->authorize('Administrateur');
+        $this->authorize('Control');
         $categories = \App\category::pluck('nom','id');
         return view('cours.create', compact('categories'));
     }
@@ -101,7 +102,7 @@ class CoursController extends Controller
     }
     public function destroy($id)
     {
-        $this->authorize('Control');
+        $this->authorize('Administrateur');
         //$this->authorize('Professeur');
         $cours = Cour::find($id);
         if($cours)
@@ -121,7 +122,7 @@ class CoursController extends Controller
         $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','1')->paginate(1);
         $category = category::orderBy('created_at', 'DESC')->where('id','')->get();
         //dd($comment);
-        return view('layouts.page_cat',compact('cours','index_cour','comment','autre_cour','category'));
+        return view('layouts.cours',compact('cours','index_cour','comment','autre_cour','category'));
     }
     public function css(){
         $autre_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','3')->get();
@@ -130,7 +131,7 @@ class CoursController extends Controller
         $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','3')->paginate(1);
         $category = category::orderBy('created_at', 'DESC')->where('id','3')->get();
         //dd($comment);
-        return view('layouts.page_cat',compact('cours','index_cour','comment','autre_cour','category'));
+        return view('layouts.cours',compact('cours','index_cour','comment','autre_cour','category'));
     }
     public function php(){
         $autre_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','2')->get();
@@ -139,7 +140,7 @@ class CoursController extends Controller
         $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','2')->paginate(1);
         $category = category::orderBy('created_at', 'DESC')->where('id','2')->get();
         //dd($comment);
-        return view('layouts.page_cat',compact('cours','index_cour','comment','autre_cour','category'));
+        return view('layouts.cours',compact('cours','index_cour','comment','autre_cour','category'));
     }
     public function java(){
         $autre_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','4')->get();
@@ -148,7 +149,7 @@ class CoursController extends Controller
         $index_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','4')->paginate(1);
         $category = category::orderBy('created_at', 'DESC')->where('id','4')->get();
         //dd($comment);
-        return view('layouts.page_cat',compact('cours','index_cour','comment','autre_cour','category'));
+        return view('layouts.cours',compact('cours','index_cour','comment','autre_cour','category'));
     }
     
 }

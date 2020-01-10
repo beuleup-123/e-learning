@@ -1,15 +1,6 @@
 @extends('layouts.app')
 @section('content')
-        <div class="row content contenu_formation">
-            <!-- Search Widget -->
-            <div class="col-lg-11  position-center search">
-                 <div class="card-body">
-                     <div class="input-group">
-                       <input type="text" class="form-control" placeholder="Search for...">
-                          <span class="input-group-btn"><button class="btn btn-secondary" type="button">Go!</button></span>
-                        </div>
-                 </div>
-            </div>
+        <div class="row content ">
         <!-- Sidebar Widgets Column -->
             <div class="list_cat col-lg-3 fixed-left">
                 <!-- Categories Widget -->

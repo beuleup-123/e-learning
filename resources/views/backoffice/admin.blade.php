@@ -1,7 +1,52 @@
 @extends('layouts._navbar')
 @section('content')
-
-  <div id="wrapper">
+<div id="wrapper">
+    <!-- Sidebar -->
+<ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+                @can('Administrateur')
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                @endcan
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Login Screens:</h6>
+                    <a class="dropdown-item" href="/login">Login</a>
+                    <a class="dropdown-item" href="/register">Register</a>
+                    <a class="dropdown-item" href="/forgot-password">Forgot Password</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header">Other Pages:</h6>
+                    <a class="dropdown-item" href="/404">404 Page</a>
+                    <a class="dropdown-item" href="/blank">Blank Page</a>
+                </div>
+      </li>
+      <li class="nav-item">
+                <a class="nav-link" href="/cours">
+                    <i class="fas fa fa-book"></i>
+                    <span>Cours</span></a>
+            </li>
+            <li class="nav-item">
+            @can('Administrateur')
+                <a class="nav-link" href="/categories">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Categories</span></a>
+            @endcan        
+            </li>
+            <li class="nav-item">
+            @can('Administrateur')
+                <a class="nav-link" href="/profs">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Professeurs</span></a>
+             @endcan       
+    </li>
+    </ul>
     <div id="content-wrapper">
 
       <div class="container-fluid">
@@ -20,7 +65,7 @@
             <div class="card text-white bg-primary o-hidden h-100">
               <div class="card-body">
                 <div class="card-body-icon">
-                  <i class="fas fa-fw fa-comments"></i>
+                  <i class="fas fa-fw fa-book"></i>
                 </div>
                 <div class="mr-5">{{$cours_count}} Cours</div>
               </div>
@@ -82,36 +127,15 @@
           </div>--}}
         </div>
 
-        <!-- Area Chart Example-->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-chart-area"></i>
-            Area Chart Example</div>
-          <div class="card-body">
-            <canvas id="myAreaChart" width="100%" height="30"></canvas>
-          </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-        </div>
-
-        <!-- DataTables Example -->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            Data Table Example</div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              </table>
-            </div>
-          </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-        </div>
-
       </div>
       <!-- /.container-fluid -->
-
-    
-
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright © Your Website 2019</span>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- /.content-wrapper -->
 
