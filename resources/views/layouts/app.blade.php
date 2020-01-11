@@ -65,7 +65,14 @@
                               <span>back-office</span></a>
                              @endcan
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ route('logout') }}" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                            <a class="dropdown-item" href="#"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <p> <i class="fa fa-unlock">{{ __('Deconnecter') }}</i></p> 
+                            </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </div>
                         </li>
                         @endguest

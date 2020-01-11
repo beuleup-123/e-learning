@@ -90,7 +90,14 @@
         <div class="modal-body">Sélectionnez "Logout" ci-dessous si vous êtes prêt à terminer votre session en cours.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="/login">Logout</a>
+          <a class="btn btn-primary" href="#"
+              onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+               Deconnecter</i> 
+          </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
         </div>
       </div>
     </div>

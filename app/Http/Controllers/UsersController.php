@@ -13,6 +13,7 @@ class UsersController extends Controller
      }
      public function create()
      {
+        $this->authorize('Administrateur');
          return view('prof.create');
      }
      public function store(Request $request)
@@ -53,7 +54,7 @@ class UsersController extends Controller
     }
     public function destroy($id)
     {
-       // $this->authorize('Administrateur');
+        $this->authorize('Administrateur');
         $profs = \App\User::find($id);//on recupere le user
         if ($profs)
             $profs->delete();

@@ -17,6 +17,7 @@ class ProfsController extends Controller
     }
     public function create()
     {
+        $this->authorize('Administrateur');
         return view('prof.create');
     }
     public function store(Request $request)

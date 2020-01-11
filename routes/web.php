@@ -60,6 +60,7 @@ Route::get('/home','HomeController@index')->name('home');
 Route::get('/admin/backoffice', 'BackofficeController@backoffice')->name('backoffice')->middleware(["can:Administrateur"]);
 
 
+
 Route::get('/comment/create','CommentController@create')->name('comment_create');
 Route::post('/comment/store','CommentController@store')->name('comment_store');
 Route::get('/comment/{id}/destroy','CommentController@destroy')->name('comment_delete')->middleware(["can:Administrateur"]);
