@@ -1,8 +1,8 @@
 <?php
 namespace App\Providers;
+use Illuminate\Support\Facades\Schemas;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schemas;
 use App\User;
 class AppServiceProvider extends ServiceProvider
 {
