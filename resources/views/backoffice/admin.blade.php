@@ -28,20 +28,20 @@
                 </div>
       </li>
       <li class="nav-item">
-                <a class="nav-link" href="/cours">
+                <a class="nav-link" href="/cours/index">
                     <i class="fas fa fa-book"></i>
                     <span>Cours</span></a>
             </li>
             <li class="nav-item">
             @can('Administrateur')
-                <a class="nav-link" href="/categories">
+                <a class="nav-link" href="/categories/index">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Categories</span></a>
             @endcan        
             </li>
             <li class="nav-item">
             @can('Administrateur')
-                <a class="nav-link" href="/profs">
+                <a class="nav-link" href="/prof/index">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Professeurs</span></a>
              @endcan       
@@ -69,7 +69,7 @@
                 </div>
                 <div class="mr-5">{{$cours_count}} Cours</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="/cours">
+              <a class="card-footer text-white clearfix small z-1" href="/cours/index">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="mr-5">{{$categories_count}} Categories</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="/categories">
+              <a class="card-footer text-white clearfix small z-1" href="/categories/index">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="mr-5"></i>{{$profs_count}} Professeurs</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="/profs">
+              <a class="card-footer text-white clearfix small z-1" href="/prof/index">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
