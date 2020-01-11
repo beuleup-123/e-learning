@@ -34,7 +34,7 @@ class ProfsController extends Controller
         $user->password = Hash::make($request['password']);
         $user->status = $request->input('status');
         $user->save();
-        return redirect()->route('prof_index')->with(['success' => "Vos données sont enregistrées"]);
+        return redirect()->back()->with(['success' => "Vos données sont enregistrées"]);
     }
 
    public function edit($id)
@@ -55,7 +55,7 @@ class ProfsController extends Controller
            $profs->status = $request->input('status');
            $profs->save();
        }
-       return redirect()->route('prof_index')->with(['success' => "modification enregistré"]);
+       return redirect()->back()->with(['success' => "modification enregistré"]);
    }
    public function destroy($id)
    {
@@ -63,7 +63,7 @@ class ProfsController extends Controller
        $profs = \App\User::find($id);//on recupere le user
        if ($profs)
            $profs->delete();
-       return redirect()->route('prof_index');
+       return redirect()->back();
    }
     public  function  backoffice()
     {

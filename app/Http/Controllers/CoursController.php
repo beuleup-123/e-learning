@@ -57,7 +57,7 @@ class CoursController extends Controller
         $cours->description = $request->input('description');
         $cours->category_id = $request->input('category_id');
         $cours->save();
-        return redirect()->route('backoffice')->with(['success' => "cours enregistré"]);
+        return redirect()->back()->with(['success' => "cours enregistré"]);
     }
     public function edit($id)
     {
@@ -98,7 +98,7 @@ class CoursController extends Controller
             $cours->category_id = $request->input('category_id');
             $cours->save();
         }
-        return redirect()->route('backoffice')->with(['success' => "modification enregistré"]);
+        return redirect()->back()->with(['success' => "modification enregistré"]);
     }
     public function destroy($id)
     {
@@ -107,7 +107,7 @@ class CoursController extends Controller
         $cours = Cour::find($id);
         if($cours)
             $cours->delete();
-        return redirect()->route('backoffice')->with(['success' => "Vos donnees ont ete suprimees"]);
+        return redirect()->back()->with(['success' => "Vos donnees ont ete suprimees"]);
     }
     public function uploadFile(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null)
     {

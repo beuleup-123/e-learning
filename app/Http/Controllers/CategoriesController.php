@@ -22,7 +22,7 @@ class CategoriesController extends Controller
         $categories = new category();
         $categories->nom = $request->input('nom');
         $categories->save();
-        return redirect('/categories');
+        return redirect()->back();
     }
     public function destroy($id)
     {
@@ -48,6 +48,6 @@ class CategoriesController extends Controller
             $categories->nom = $request->input('nom');
             $categories->save();
         }
-        return redirect('/categories');
+        return redirect()->back();
     }
 }
