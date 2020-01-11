@@ -7,7 +7,7 @@
     <link href="{{asset('css/all.css')}}" rel="stylesheet" />
     <link href="{{asset('css/fontawesome.css')}}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"/>
 </head>
 <body>
 <!-- Navigation -->
@@ -91,8 +91,7 @@
                 </div>
             </div>
         </div>
-    </header>
-    -->
+    </header> -->
     <div>
         @yield("content")
     </div>
