@@ -2,6 +2,7 @@
 namespace App\Providers;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schemas;
 use App\User;
 class AppServiceProvider extends ServiceProvider
 {
@@ -32,6 +33,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (config('app.env')==='production') {
+            \URL::forceScheme('https');
+        }
         \Illuminate\Support\Facades\Schema::defaultStringLength(191);
     }
    
