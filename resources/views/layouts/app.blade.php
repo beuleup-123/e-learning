@@ -7,7 +7,7 @@
     <link href="{{asset('css/all.css')}}" rel="stylesheet" />
     <link href="{{asset('css/fontawesome.css')}}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"/>
 </head>
 <body>
 <!-- Navigation -->
@@ -29,7 +29,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html" src="contact.html">Contact</a>
                         </li>
-                        <li class="nav-link">{{_('|')}}</li>
+                        <li class="nav-item">
+                        <p class="nav-link">{{_('|')}}</p>
+                        </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Connecter') }}</a>
@@ -91,8 +93,7 @@
                 </div>
             </div>
         </div>
-    </header>
-    -->
+    </header> -->
     <div>
         @yield("content")
     </div>
