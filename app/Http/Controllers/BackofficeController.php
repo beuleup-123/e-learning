@@ -11,7 +11,7 @@ class                                                                           
 {
     public  function  backoffice()
     {
-       // $this->authorize('Administrateur');
+        $this->authorize('Control');
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         $profs = User::orderBy('created_at', 'DESC')->where('status','Professeur')->get();
         $categories = category::orderBy('created_at', 'DESC')->get();

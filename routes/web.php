@@ -40,7 +40,7 @@ Route::middleware(["can:Administrateur"])->prefix('/categories')->group(function
     Route::patch('{id}/edit','CategoriesController@update')->name('category_update');
     Route::get('/{id}/destroy','CategoriesController@destroy')->name('category_delete');
 });
-Route::prefix('/prof')->group(function(){
+Route::middleware(["can:Control"])->prefix('/prof')->group(function(){
     Route::get('/backoffice', 'ProfsController@backoffice')->name('prof_backoffice');
     Route::get('/index','ProfsController@index')->name('prof_index');
     Route::get('/create','ProfsController@create')->name('prof_create');
@@ -57,7 +57,7 @@ Auth::routes();
 Route::get('/','HomeController@index')->name('home');
 Route::get('/home','HomeController@index')->name('home');
 
-Route::get('/admin/backoffice', 'BackofficeController@backoffice')->name('backoffice');
+Route::get('/admin/backoffice', 'BackofficeController@backoffice')->name('backoffice')->middleware(["can:Administrateur"]);
 
 
 Route::get('/comment/create','CommentController@create')->name('comment_create');

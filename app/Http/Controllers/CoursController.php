@@ -18,13 +18,13 @@ class CoursController extends Controller
       }*/
     public function index()
     {
-       // $this->authorize('Control');
+        $this->authorize('Control');
         $cours = Cour::orderBy('created_at', 'DESC')->get();
         return view ("cours.index",compact('cours'));
     }
     public function create()
     {
-       // $this->authorize('Control');
+        $this->authorize('Control');
         $categories = \App\category::pluck('nom','id');
         return view('cours.create', compact('categories'));
     }
@@ -115,7 +115,7 @@ class CoursController extends Controller
         $file = $uploadedFile->storeAs($folder, $name.'.'.$uploadedFile->getClientOriginalExtension(), $disk);
         return $file;
     }
-    /* formation */
+    /* for formation */
     public function html(){
         $autre_cour = Cour::orderBy('created_at', 'DESC')->where('category_id','1')->get();
         $cours = Cour::orderBy('created_at', 'DESC')->where('category_id','1')->get();

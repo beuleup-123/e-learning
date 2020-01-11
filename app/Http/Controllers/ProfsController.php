@@ -11,7 +11,7 @@ class ProfsController extends Controller
 {
     public function index()
     {
-      //  $this->authorize('Administrateur');
+        $this->authorize('Administrateur');
         $profs = User::orderBy('created_at', 'DESC')->where('status','Professeur')->get();
         return view("prof.index", compact('profs'));
     }
