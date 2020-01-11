@@ -1,6 +1,5 @@
 @extends("layouts.app")
 @section("content")
-
     <!-- Page Content -->
         <div class="row .bimg ">
            
@@ -103,11 +102,6 @@
 </div>
 <!-- /.row -->
 
-</div>
-<!-- /.col-lg-9 -->
-
-            
-       
-
+</div>      
     <!-- /.container -->
 @endsection
