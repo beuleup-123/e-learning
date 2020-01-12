@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
     @section('categ')
-     <ul class=" nav  nav-fill  blueitem" id="fixite">
+    <aside class="navcat">
+     <ul class=" nav  nav-fill  blueitem">
         <li class="nav-item">
             <a class="nav-link textcolor text-success" href="{{route('html')}}">HTML</a>
         </li>
@@ -15,7 +16,7 @@
             <a class="nav-link textcolor text-success" href="{{route('java')}}" >Javascript</a>
         </li>
      </ul>
-
+     </aside>
     @endsection
     <!-- Sidebar Widgets Column -->
     <div class="list_cat  sidebar topitem ">
@@ -43,7 +44,7 @@
         <div class="container-fluid "> 
             <!-- Title -->
             @foreach($index_cour as $cour)
-                <div class="titre contenu blueitem">
+                <div class="titre contenu ">
                     <h3 id="cour_nom" class="col-md-4 ">{{$cour->nom}}</h3>
                     <!-- Date/Time -->
                     <p col-md-4>{{$cour->updated_at}}</p>

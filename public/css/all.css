@@ -43,9 +43,6 @@ body {
     flex: 0 0 100%;
     max-width: 80%;
 }*/
-#fixitem{
-  position: fixed;
-}
 .catego{
     width: 100%;
     height: 100%;
@@ -86,7 +83,9 @@ body {
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: stretch;
-	align-content: stretch;
+  align-content: stretch;
+  margin-top: 40px;
+  background-color: beige;
 }
 .border{
     border-block: 2px,2px,black;
@@ -99,10 +98,10 @@ body {
   width: 100%;
   height: 100px;
 }
-.contenu{
-    width: 100%;
-    padding-left: 110px;
-    padding-right: 5px;
+.contenu{ 
+    margin-left: 110px;
+    padding-right: 0px;
+    padding-top: 0px;
 }
 .body-office{
     width: 100%;
@@ -114,6 +113,12 @@ body {
 .topitem{
     padding-top: 5px;
 }
+.navcat{
+  position: fixed !important;
+  width: 100%;
+  z-index: 10;
+  margin-left: 225px;
+}
 .bimg{
 background-image: url("/public/images/el2.jpg");
 z-index: 9;
@@ -121,6 +126,7 @@ z-index: 9;
 .textcolor{
 text-decoration-color: lime !important;
 }
+
 .sidebar {
     width: 90px !important;
     background-color: #d1d5e2;
