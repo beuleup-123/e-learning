@@ -96,28 +96,46 @@ body {
 }
 .mesimg{
   width: 100%;
-  height: 100px;
+  height: 250px;
 }
 .contenu{ 
     margin-left: 110px;
     padding-right: 0px;
     padding-top: 0px;
 }
+.contact{
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    background-color: rgb(245, 239, 188);
+    width: 100%;
+    height: 100vh;
+}
 .body-office{
     width: 100%;
     height: 560px;
 }
 .blueitem{
-    background-color:rgb(47, 15, 230);
+    background-color:rgba(164, 70, 201, 0.705);
 }
 .topitem{
     padding-top: 5px;
 }
 .navcat{
   position: fixed !important;
-  width: 100%;
+  width: 1094px;
   z-index: 10;
   margin-left: 225px;
+  margin-right: 0px;
+  margin-top: 5px;
+}
+.heigtnavbar{
+  height: 59px;
+}
+.heigthcat{
+  height: 300px;
 }
 .bimg{
 background-image: url("/public/images/el2.jpg");

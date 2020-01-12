@@ -12,9 +12,9 @@
 <body>
 <!-- Navigation -->
     <div class="menu">
-        <nav class="navbar navbar-expand-xl navbar-toggler navbar-dark bg-info fixed-top">
+        <nav class="navbar navbar-expand-lg heigthnavbar navbar-dark bg-info fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#"><h3 > HOM<small style="text-decoration: #00ff80">Edu</small></h3></a>
+                <a class="navbar-brand" href="#"><h3 > HOM<small >Edu</small></h3></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,7 +27,7 @@
                             <a class="nav-link" href="{{route('formation')}}" >Formations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html" src="contact.html">Contact</a>
+                            <a class="nav-link" href="{{route('contact')}}">Contact</a>
                         </li>
                         <li class="nav-link">{{__('|')}}</li>
                         @guest

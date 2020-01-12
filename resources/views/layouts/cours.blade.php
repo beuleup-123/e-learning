@@ -55,7 +55,7 @@
                 <hr>
                 <!-- Comments Form -->
                 <div class=" my-4 contenu">
-                    <h5 class="header blueitem">Leave a Comment:</h5>
+                    <h5 class="header blueitem">votre commentaire:</h5>
                     <div class="card-body">
                         <form action="{{route('comment_store')}}" method="post" enctype="multipart/form-data">
                             @csrf

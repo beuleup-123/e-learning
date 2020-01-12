@@ -36,6 +36,10 @@ class HomeController extends Controller
     {
         return view('layouts.app');
     }
+    public function contact()
+    {
+        return view('contact');
+    }
     public function format()
     {
        // Auth::logout();

@@ -37,7 +37,7 @@
 
     <div class="col-lg-6 col-md-6 mb-4">
         <div class="card h-100">
-          <a href="{{route('css')}}"><img class="card-img-top" src="{{asset('images/css_code.png')}}" alt=""></a>
+          <a href="{{route('css')}}"><img class="card-img-top mesimg" src="{{asset('images/css_code.png')}}" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">CSS</a>
@@ -52,7 +52,7 @@
 
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="card h-100">
-          <a href="{{route('html')}}"><img class="card-img-top" src="{{asset('images/code_html1.jpeg')}}" alt=""></a>
+          <a href="{{route('html')}}"><img class="card-img-top mesimg" src="{{asset('images/code_html1.jpeg')}}" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">HTML</a>
@@ -68,7 +68,7 @@
 
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="card h-100">
-          <a href="{{route('php')}}"><img class="card-img-top" src="{{asset('images/phpdesigner.png')}}" alt=""></a>
+          <a href="{{route('php')}}"><img class="card-img-top mesimg" src="{{asset('images/phpdesigner.png')}}" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">PHP</a>
@@ -84,7 +84,7 @@
 
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="{{asset('images/code_Javascript.png')}}" alt=""></a>
+          <a href="#"><img class="card-img-top mesimg" src="{{asset('images/code_Javascript.png')}}" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="{{route('java')}}">JavaScript</a>
