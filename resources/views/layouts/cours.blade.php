@@ -4,16 +4,16 @@
     <aside class="navcat">
      <ul class=" nav  nav-fill  blueitem">
         <li class="nav-item">
-            <a class="nav-link textcolor text-success" href="{{route('html')}}">HTML</a>
+            <a class="nav-link textcolor" href="{{route('html')}}">HTML</a>
         </li>
         <li class="nav-item textcolor">
-            <a class="nav-link textcolor text-success" href="{{route('php')}}">PHP</a>
+            <a class="nav-link textcolor" href="{{route('php')}}">PHP</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link textcolor text-success" href="{{route('css')}}">CSS</a>
+            <a class="nav-link textcolor" href="{{route('css')}}">CSS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link textcolor text-success" href="{{route('java')}}" >Javascript</a>
+            <a class="nav-link textcolor " href="{{route('java')}}" >Javascript</a>
         </li>
      </ul>
      </aside>
@@ -30,7 +30,7 @@
                         <div class="body">
                             @foreach($cours as $cour)
                                 @if($cour->category_id == $category->id )
-                                     <a href="{{route('show',['slug'=>$cour->slug])}}"><p class="textcolor text-success">{{$cour->nom}}</p></a>
+                                     <a href="{{route('show',['slug'=>$cour->slug])}}"><p class="textcolor">{{$cour->nom}}</p></a>
                                 @endif
                             @endforeach
                         </div>
@@ -55,7 +55,7 @@
                 <hr>
                 <!-- Comments Form -->
                 <div class=" my-4 contenu">
-                    <h5 class="header blueitem">votre commentaire:</h5>
+                    <h4 class="header"> Votre commentaire:</h4>
                     <div class="card-body">
                         <form action="{{route('comment_store')}}" method="post" enctype="multipart/form-data">
                             @csrf

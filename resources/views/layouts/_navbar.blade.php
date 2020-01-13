@@ -14,7 +14,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top fixed-top">
 
-    <a class="navbar-brand mr-1" href="/">HOMEdu</a>
+    <a class="navbar-brand mr-1" href="/"><h3 > <strong class="textcolor">HOM</strong><small >Edu</small></h3></a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="/">
       <i class="fas fa-bars"></i>
@@ -64,7 +64,7 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="#">Profil</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{ route('logout') }}" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          <a class="dropdown-item" href="{{ route('logout') }}" data-toggle="modal" data-target="#logoutModal">Deconnecter</a>
         </div>
       </li>
     </ul>

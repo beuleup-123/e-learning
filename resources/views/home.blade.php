@@ -44,8 +44,8 @@
             </h4>
             <p>CSS (Cascading Style Sheets), c'est cet autre langage qui vient compléter le HTML.</p>
           </div>
-          <div class="card-footer">
-          <a href="{{route('css')}}" class="tree-item_link">voir la formation <i class="fa fa-chevron-right"></i></a>   
+          <div class="btn btn-secondary">
+          <a href="{{route('css')}}" class="tree-item_link textcolor">voir la formation <i class="fa fa-chevron-right"></i></a>   
           </div>
         </div>
       </div>
@@ -60,8 +60,8 @@
             <p>HTML signifie « HyperText Markup Language » qu'on peut traduire par 
                                         « langage de balises pour l'hypertexte ».</p>
           </div>
-          <div class="card-footer">
-          <a href="{{route('html')}}" class="tree-item_link">voir la formation <i class="fa fa-chevron-right"></i></a>   
+          <div class="btn btn-secondary">
+          <a href="{{route('html')}}" class=" tree-item_link textcolor">voir la formation <i class="fa fa-chevron-right"></i></a>   
           </div>
         </div>
       </div>
@@ -76,8 +76,8 @@
             <p>PHP est un langage de programmation compilé à la volée très utilisé pour produire des pages Web dynamique.
                                         C'est un langage très abordables qui va vous permettre de créer vos premiers site web dynamiques.</p>
           </div>
-          <div class="card-footer">
-          <a href="{{route('php')}}" class="tree-item_link">voir la formation <i class="fa fa-chevron-right"></i></a>
+          <div class="btn btn-secondary">
+          <a href="{{route('php')}}" class="tree-item_link textcolor">voir la formation <i class="fa fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -92,8 +92,8 @@
             <p>Le JavaScript va vous permettre de rajouter des intéractions au niveau de vos
                                     éléments HTML et de modifier le DOM.</p>
           </div>
-          <div class="card-footer">
-          <a href="{{route('java')}}" class="tree-item_link"> voir la formation <i class="fa fa-chevron-right"></i> </a>
+          <div class="btn btn-secondary">
+          <a href="{{route('java')}}" class="tree-item_link textcolor"> voir la formation <i class="fa fa-chevron-right"></i> </a>
           </div>
         </div>
       </div>

@@ -2,7 +2,8 @@
 @section("content")
 <div class="row contact ">       
 
-  <div class="col-lg-12">
+  <div class="col-lg-9">
+    <h3>Message</h3> <hr>
     <form>
       <div class="form-group">
         <label for="exampleFormControlInput1">Votre nom </label>
@@ -23,5 +24,24 @@
      <button class="btn btn-primary">Envoyer</button>
     </form>
    </div>
+   <div class="col-lg-3 ">
+      <h3 class="">Nos Contacts</h3>
+        <hr>
+        <div class=" ">
+            <strong style=" color=blue;">HOMEdu</strong><br>
+            <address class=""> 
+              <i class="fa fa-university"></i>
+                Dakar 
+            </address>
+            <address class="">
+              <i class="fa fa-phone"></i>
+                774857172
+            </address>
+            <address class="">
+                <i class="fa fa-at"></i>
+                <a href="mailto:#">home.edu@edu.com</a>
+            </address>
+      </div>
+    </div>
 </div>
 @endsection

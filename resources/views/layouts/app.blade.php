@@ -12,9 +12,9 @@
 <body>
 <!-- Navigation -->
     <div class="menu">
-        <nav class="navbar navbar-expand-lg heigthnavbar navbar-dark bg-info fixed-top">
+        <nav class="navbar navbar-expand-lg heigthnavbar navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#"><h3 > HOM<small >Edu</small></h3></a>
+                <a class="navbar-brand" href="#"><h3 > <strong class="textcolor">HOM</strong><small >Edu</small></h3></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,7 +44,7 @@
                               <!-- Navbar Search -->
                             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control" placeholder="Recherche..." aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search"></i>
