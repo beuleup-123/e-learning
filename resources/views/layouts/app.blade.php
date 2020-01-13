@@ -99,7 +99,7 @@
             </div>
         </div>
     </header> -->
-    <div>
+    <div class="cont">
         @yield("content")
     </div>
 <!-- /.container -->
