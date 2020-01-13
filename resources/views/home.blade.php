@@ -13,10 +13,10 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <img class="d-block img-fluid icon" src="{{asset('images/code.JPG')}}" height="250" width="250" alt="First slide">
+          <img class="d-block icon" src="{{asset('images/code.JPG')}}" height="250" width="250" alt="First slide">
         </div>
         <div class="carousel-item">
-        <img class="d-block img-fluid mesimg" src="{{asset('images/imagsider1.jpg')}}" height="250" width="250" alt="First slide">
+        <img class="d-block icon" src="{{asset('images/imagsider1.jpg')}}" height="250" width="250" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
             <h3 class="text-ligth text-center"> Homedu est une application web qui vous propose des cours en 
               css, html, php eten JavaScript... </h3>
