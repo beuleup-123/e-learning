@@ -19,7 +19,7 @@
         <img class="d-block icon" src="{{asset('images/imagsider1.jpg')}}" height="250" width="250" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
             <h3 class="text-ligth text-center"> Homedu est une application web qui vous propose des cours en 
-              css, html, php eten JavaScript... </h3>
+              css, html, php et en JavaScript... </h3>
           </div>
         </div>
       </div>
