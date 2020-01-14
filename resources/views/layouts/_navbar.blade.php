@@ -87,9 +87,9 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Sélectionnez "Logout" ci-dessous si vous êtes prêt à terminer votre session en cours.</div>
+        <div class="modal-body">Sélectionnez "Deconnecter" ci-dessous si vous êtes prêt à terminer votre session en cours.</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
           <a class="btn btn-primary" href="#"
               onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">

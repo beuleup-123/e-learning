@@ -58,7 +58,7 @@ Route::get('/','HomeController@index')->name('home');
 Route::get('/home','HomeController@index')->name('home');
 Route::get('/contact','HomeController@contact')->name('contact')->middleware('auth');
 
-Route::get('/admin/backoffice', 'BackofficeController@backoffice')->name('backoffice')->middleware(["can:Administrateur"]);
+Route::get('/admin/backoffice', 'BackofficeController@backoffice')->name('backoffice')->middleware(["can:Control"]);
 
 
 

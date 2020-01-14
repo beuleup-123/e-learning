@@ -40,7 +40,7 @@ class LoginController extends Controller
         if(auth()->user()->isAdmin()){
             return '/admin/backoffice';
         } elseif(auth()->user()->isModerator()){
-            return '/prof/backoffice';
+            return '/admin/backoffice';
         } else {
             return '/';
         }
