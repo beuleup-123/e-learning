@@ -14,7 +14,7 @@ body {
 } 
 .cont{
   margin: 0px;
-  padding-left: 15px !important;
+  padding-left: 0px !important;
   padding-right: 5px !important;
 }
 .row{
@@ -79,9 +79,9 @@ body {
 }
 .list_cat{
     width: 100%;
-    padding-left: 35px;
+    padding-left: 15px;
     position: fixed;
-
+    overflow: scroll;
 }
 .titre{
     display: flex;
@@ -105,7 +105,7 @@ body {
   height: 250px;
 }
 .contenu{ 
-    margin-left: 110px;
+    margin-left: 112px;
     padding-right: 0px;
     padding-top: 0px;
 }
@@ -124,19 +124,19 @@ body {
     width: 100%;
     height: 560px;
 }
-.blueitem{
-    background-color:rgba(164, 70, 201, 0.705);
+.bgitem{
+    background-color:rgba(227, 191, 82, 1);
 }
 .topitem{
     padding-top: 5px;
 }
 .navcat{
   position: fixed !important;
-  width: 1094px;
+  width: 100%;
   z-index: 10;
-  margin-left: 240px;
+  margin-left: 225px;
   margin-right: 0px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .heigtnavbar{
   height: 59px;
@@ -145,13 +145,16 @@ body {
   height: 300px;
 }
 .textcolor{
-text-decoration-color: lime !important;
-color: lime !important;
+text-decoration-color: rgb(236, 162, 65) !important;
+color: rgba(14, 14, 54, 0.87) !important;
 }
-
+.foot{
+  width: 100%;
+  z-index: 10;
+}
 .sidebar {
     width: 90px !important;
-    background-color: #d1d5e2;
+    background-color: #f8f9fc50;
     min-height: calc(100vh - 56px);
     margin-top: 9px !important;
   }

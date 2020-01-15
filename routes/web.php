@@ -23,10 +23,10 @@ Route::get('/{id}/edit','CoursController@edit')->name('cour_edit');
 Route::patch('/{id}/edit','CoursController@update')->name('cour_update');
 Route::get('/{id}/destroy','CoursController@destroy')->name('cour_delete');
 });
-Route::get('/projet/formation/html','CoursController@html')->name('html')->middleware('auth');
-Route::get('/projet/formation/php','CoursController@php')->name('php')->middleware('auth');
-Route::get('/projet/formation/css','CoursController@css')->name('css')->middleware('auth');
-Route::get('/projet/formation/java','CoursController@java')->name('java')->middleware('auth');
+Route::get('/projet/formation/html','CoursController@html')->name('html');
+Route::get('/projet/formation/php','CoursController@php')->name('php');
+Route::get('/projet/formation/css','CoursController@css')->name('css');
+Route::get('/projet/formation/java','CoursController@java')->name('java');
 /*Route::get('formation', function () {
     $cours = App\Cour::paginate(4);
     $cours->withPath('custom/url');
@@ -49,14 +49,14 @@ Route::middleware(["can:Control"])->prefix('/prof')->group(function(){
     Route::get('/{id}/destroy','ProfsController@destroy')->name('prof_delete');
     Route::patch('/{id}/edit','ProfsController@update')->name('prof_update');
 });
-Route::get('/projet/formation','HomeController@format')->name('formation')->middleware('auth');
+Route::get('/projet/formation','HomeController@format')->name('formation');
 //Route::get('/projet/formation','HomeController@cours')->name('formation')->middleware('auth');
-Route::get("/projet/formation/{slug}/show", 'HomeController@show')->name('show')->middleware('auth');
+Route::get("/projet/formation/{slug}/show", 'HomeController@show')->name('show');
 Route::get('/projet/layout','HomeController@layouts')->name('layout');
 Auth::routes();
 Route::get('/','HomeController@index')->name('home');
 Route::get('/home','HomeController@index')->name('home');
-Route::get('/contact','HomeController@contact')->name('contact')->middleware('auth');
+Route::get('/contact','HomeController@contact')->name('contact');
 
 Route::get('/admin/backoffice', 'BackofficeController@backoffice')->name('backoffice')->middleware(["can:Control"]);
 

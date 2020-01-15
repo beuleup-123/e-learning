@@ -30,16 +30,7 @@
                             <a class="nav-link" href="{{route('contact')}}">Contact</a>
                         </li>
                         <li class="nav-link">{{__('|')}}</li>
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Connecter') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Inscrire') }}</a>
-                                </li>
-                            @endif
-                        @else
+                        @guest       
                         <li class="nav-item">
                               <!-- Navbar Search -->
                             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -53,12 +44,13 @@
                             </div>
                             </form>
                         </li>
+                        <!--
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-user-circle fa-fw"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">{{ Auth::user()->name }}</a>
+                            <a class="dropdown-item" href="#">{{-- Auth::user()->name --}}</a>
                             @can('Administrateur')
                               <a class="dropdown-item" href="/admin/backoffice">
                                   <i class="fas fa-bars"></i>
@@ -75,6 +67,7 @@
                                 </form>
                             </div>
                         </li>
+                        -->
                         @endguest
                     </ul>
                 </div>
@@ -103,9 +96,19 @@
         @yield("content")
     </div>
 <!-- /.container -->
-    <footer class="bg-ligth">
-        <div class="container">
-            <p class="m-0 text-center text-dark">Copyright &copy; E-learning 2019</p>
+    <footer class="bg-dark foot">
+        <div class="container foot">
+            <p class="m-0 text-center text-white">Copyright &copy; E-learning 2019</p>
+        </div>
+        <div class="content">
+            <div class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}">{{ __('Connecter') }}</a>
+            </div>
+            @if (Route::has('register'))
+                <div class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Inscrire') }}</a>
+                </diiv>
+            @endif
         </div>
         <!-- /.container -->
     </footer>

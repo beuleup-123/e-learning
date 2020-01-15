@@ -35,7 +35,7 @@ class CommentController extends Controller
     {
         $this->authorize('Control');
         //$this->authorize('Professeur');
-        $comment = Cour::find($id);
+        $comment = Comment::find($id);
         if($comment)
             $comment->delete();
         return redirect()->back()->with(['success' => "Vos donnees ont ete suprimees"]);

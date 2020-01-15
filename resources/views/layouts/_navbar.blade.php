@@ -112,6 +112,7 @@
 <script>
     tinymce.init({
         selector:'textarea.text',
+        //valid_elements : "em/i,strike,u,strong/b,div[align],br,p[align],-ol[type|compact],-ul[type|compact],-li",
        // width: 825,
         height: 300,
         branding: false,
