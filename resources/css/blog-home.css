@@ -19,8 +19,8 @@ body {
 }
 .row{
     width: 100%;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    padding-left: 0px ;
+    padding-right: 0px;
 }
 .content{
     width: 100%;
@@ -45,6 +45,10 @@ body {
     align-content: stretch;
     padding-left: 5px;
 }
+.accueil{
+  padding-left: 35px;
+  padding-right: 5px;
+}
 /*h4 #cour_nom{
     flex: 0 0 100%;
     max-width: 80%;
@@ -68,6 +72,9 @@ body {
     margin-bottom: 15px;
     max-width: 100%;
     height: 90px;
+}
+.bghead{
+  background-color: rgb(231, 135, 57);
 }
 .img{
     width: 355px;
@@ -106,7 +113,7 @@ body {
 }
 .contenu{ 
     margin-left: 112px;
-    padding-right: 0px;
+    padding-right: 15px;
     padding-top: 0px;
 }
 .contact{
@@ -132,7 +139,7 @@ body {
 }
 .navcat{
   position: fixed !important;
-  width: 100%;
+  width: 82vw;
   z-index: 10;
   margin-left: 225px;
   margin-right: 0px;
@@ -152,9 +159,12 @@ color: rgba(14, 14, 54, 0.87) !important;
   width: 100%;
   z-index: 10;
 }
+.jaunetext{
+  color: rgb(236, 162, 65) !important;
+}
 .sidebar {
-    width: 90px !important;
-    min-height: calc(100vh - 56px);
+    width: 90px !important;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    min-height: calc(88vh - 56px);
     margin-top: 9px !important;
   }
   
@@ -181,7 +191,6 @@ color: rgba(14, 14, 54, 0.87) !important;
   .bglog{
     background-color: rgba(98, 241, 241, 0.445);
   }
-  
   
   .sidebar .nav-item .dropdown-menu {
     position: absolute !important;

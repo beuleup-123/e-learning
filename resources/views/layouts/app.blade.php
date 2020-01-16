@@ -12,7 +12,7 @@
 <body>
 <!-- Navigation -->
     <div class="menu">
-        <nav class="navbar navbar-expand-lg heigthnavbar navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg heigthnavbar navbar-dark bghead fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#"><h3 > <strong class="textcolor">HOM</strong><small >Edu</small></h3></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,15 +21,15 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('home')}}"><i class="fa fa-home"></i>Accueil</a>
+                            <a class="nav-link textcolor" href="{{route('home')}}"><i class="fa fa-home"></i>Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('formation')}}" >Formations</a>
+                            <a class="nav-link textcolor" href="{{route('formation')}}" >Formations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('contact')}}">Contact</a>
+                            <a class="nav-link textcolor" href="{{route('contact')}}">Contact</a>
                         </li>
-                        <li class="nav-link">{{__('|')}}</li>
+                        <li class="nav-link textcolor">{{__('|')}}</li>
                         @guest       
                         <li class="nav-item">
                               <!-- Navbar Search -->

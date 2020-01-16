@@ -19,7 +19,7 @@
      </aside>
     @endsection
     <!-- Sidebar Widgets Column -->
-    <div class="list_cat bgitem sidebar topitem ">
+    <div class="list_cat sidebar topitem ">
         <div class="row topitem">
             @foreach($category as $category)
                 <div class="col-lg-12 col-sm-4 portfolio-item">
